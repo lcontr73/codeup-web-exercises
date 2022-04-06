@@ -12,17 +12,17 @@
  * if they're going to like it). If price for a movie per day is $3, how much will you have to pay?
  */
 
-let daysMermaid = 3;
+let littleMermaidDaysRented = 3;
 
-let daysBear = 5
+let brotherBearDaysRented = 5;
 
-let daysHerc = 1
+let herculesDaysRented = 1;
 
-let perDay = 3
+let rentPricePerDayDollars = 3;
 
-let total = "$" + perDay * (daysMermaid + daysBear + daysHerc);
+let totalPrice = "$" + rentPricePerDayDollars * (littleMermaidDaysRented + brotherBearDaysRented + herculesDaysRented);
 
-console.log(total)
+console.log(totalPrice)
 
 
 
@@ -33,15 +33,20 @@ console.log(total)
  * 6 hours for Google and 4 hours for Amazon.
  */
 
-let google = 400 * 6;
+let googlePayPerHour = 400;
 
-let amazon = 380 * 4;
+let amazonPayPerHour = 380;
 
-let facebook = 350 * 10;
+let facebookPayPerHour = 350;
 
-let payWeek = "$" + (google + amazon + facebook);
+let googleHours = 6
+let amazonHours = 4
+let facebookHours = 10
 
-console.log(payWeek)
+let TotalPayWeek = "$" + ((googlePayPerHour * googleHours) + (amazonPayPerHour * amazonHours) + (facebookPayPerHour * facebookHours));
+
+
+console.log(TotalPayWeek)
 
 
 
@@ -69,13 +74,9 @@ console.log(canEnroll)
  * and the offer has not expired. Premium members do not need to buy a specific amount of products.
  */
 let productOffer = false
-
 let twoOrMore = true;
-
 let notExpired = true;
-
 if (twoOrMore && notExpired) {
     productOffer = true
 }
-
 console.log(productOffer)
