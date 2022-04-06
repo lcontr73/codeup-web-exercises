@@ -31,11 +31,9 @@ sample.indexOf('C');
 
 
 //Retrieve a substring that contains only the word "Codeup" by using indexOf() and substring().
-sample.indexOf('C');
-
-sample.indexOf('p');
-
-sample.substring(6, 12);
+let startingIndex = sample.indexOf('Codeup');
+let endingIndex = startingIndex + 'Codeup'.length;
+sample.substring(startingIndex, endingIndex);
 
 /**
  * needed to find the index for both the start and finish of the word "Codeup" which was 6 and 11.
