@@ -33,15 +33,13 @@ console.log(totalPrice)
  * 6 hours for Google and 4 hours for Amazon.
  */
 
+let TotalPayWeek = 0;
 let googlePayPerHour = 400;
-
 let amazonPayPerHour = 380;
-
 let facebookPayPerHour = 350;
-
-let googleHours = 6
-let amazonHours = 4
-let facebookHours = 10
+let googleHours = 6;
+let amazonHours = 4;
+let facebookHours = 10;
 
 let TotalPayWeek = "$" + ((googlePayPerHour * googleHours) + (amazonPayPerHour * amazonHours) + (facebookPayPerHour * facebookHours));
 
