@@ -10,7 +10,7 @@ alert("Welcome to my Website!");
  * Use a prompt to ask for the user's favorite color. Use the user's response to alert a message
  * that says that the color entered is your favorite color too.
  */
-var favoriteColor = prompt("What is your favorite color?");
+let favoriteColor = prompt("What is your favorite color?");
 alert('That\'s awesome,' + ' ' + favoriteColor + ' ' + 'is my favorite color too!');
 
 
@@ -20,17 +20,52 @@ alert('That\'s awesome,' + ' ' + favoriteColor + ' ' + 'is my favorite color too
  * if they're going to like it). If price for a movie per day is $3, how much will you have to pay?
  */
 
-var littleMermaidDaysRented = parseFloat(prompt('How many days do you want to rent Little Mermaid?'));
+let littleMermaidDaysRented = parseFloat(prompt('How many days do you want to rent Little Mermaid?'));
 alert('You chose to rent Little Mermaid for' + ' ' + littleMermaidDaysRented + ' ' + 'days.');
-var brotherBearDaysRented = parseFloat(prompt('How many days do you want to rent Brother Bear?'));
+let brotherBearDaysRented = parseFloat(prompt('How many days do you want to rent Brother Bear?'));
 alert('You chose to rent Brother Bear for' + ' ' + brotherBearDaysRented + ' ' + 'days.');
-var herculesDaysRented = parseFloat(prompt('How many days do you want to rent Hercules?'));
+let herculesDaysRented = parseFloat(prompt('How many days do you want to rent Hercules?'));
 alert('You chose to rent Hercules for' + ' ' + herculesDaysRented + ' ' + 'days.');
-var rentPricePerDayDollars = parseFloat(prompt('How much does it cost to rent one movie per day?'));
+let rentPricePerDayDollars = parseFloat(prompt('How much does it cost to rent one movie per day?'));
 alert('You chose' + ' ' + '$' + rentPricePerDayDollars + ' ' + 'to rent one movie for' + ' ' + 'one day.');
-var totalRentalPrice = "$" + rentPricePerDayDollars * (littleMermaidDaysRented + brotherBearDaysRented + herculesDaysRented);
+let totalRentalPrice = rentPricePerDayDollars * (littleMermaidDaysRented + brotherBearDaysRented + herculesDaysRented);
 
-alert('Your total is' + ' ' + totalRentalPrice);
+alert('Your total is' + ' ' + '$' + totalRentalPrice.toFixed(2));
+
+
+/**
+ * Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook,
+ * they pay you a different rate per hour. Google pays $400, Amazon $380, and Facebook $350.
+ * How much will you receive in payment for this week? You worked 10 hours for Facebook,
+ * 6 hours for Google and 4 hours for Amazon.
+ */
+let googlePayPerHour = parseFloat(prompt('How much does Google pay per hour?'));
+alert('Google pays' + ' ' + '$' + googlePayPerHour + ' ' + 'an hour.');
+let amazonPayPerHour = parseFloat(prompt('How much does Amazon pay per hour?'));
+alert('Amazon pays' + ' ' + '$' + amazonPayPerHour + ' ' + 'an hour.');
+let facebookPayPerHour = parseFloat(prompt('How much does Facebook pay per hour?'));
+alert('Facebook pays' + ' ' + '$' + facebookPayPerHour + ' ' + 'an hour.');
+let googleHours = parseFloat(prompt('How many hours did you work this week at Google?'));
+alert('You worked' + ' ' + googleHours + ' ' + 'hours at Google this week.');
+let amazonHours = parseFloat(prompt('How many hours did you work this week at Amazon?'));
+alert('You worked' + ' ' + amazonHours + ' ' + 'hours at Amazon this week.');
+let facebookHours = parseFloat(prompt('How many hours did you work this week at Facebook?'));
+alert('You worked' + ' ' + facebookHours + ' ' + 'hours at Amazon this week.');
+
+let TotalPayWeek = "$" + ((googlePayPerHour * googleHours) + (amazonPayPerHour * amazonHours) + (facebookPayPerHour * facebookHours));
+
+
+alert('Your total pay for the week is' + ' ' + TotalPayWeek)
+
+/**
+ * A student can be enrolled in a class only if the class is not full and
+ * the class schedule does not conflict with her current schedule.
+ */
+
+
+
+
+
 
 /**
  * Complete exercise 3 from the previous lesson, but write your code in the external.js file instead of in the console.
