@@ -61,10 +61,26 @@ alert('Your total pay for the week is' + ' ' + TotalPayWeek)
  * A student can be enrolled in a class only if the class is not full and
  * the class schedule does not conflict with her current schedule.
  */
+var classNotFull = confirm('Confirm that the class is not full');
+var noClassConflict = confirm('There are no class schedule conflicts');
+
+var studentCanEnroll = classNotFull && noClassConflict;
+
+alert("Student enrollment status: " + studentCanEnroll);
 
 
+/**
+ *A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
+ * Premium members do not need to buy a specific amount of products.
+ */
 
+var discountNumberItems =2
+var numberOfItemsPurchased = prompt("How many items has the customer purchased?");
+var offerNotExpired = confirm("Has the discount offer expired?");
+var customerPremiumMember= confirm('Is the customer a premium member?');
+var applyProductDiscount = offerNotExpired && (customerPremiumMember || numberOfItemsPurchased >= discountNumberItems);
 
+alert('Product discount applied: ' + applyProductDiscount);
 
 
 /**
@@ -73,6 +89,7 @@ alert('Your total pay for the week is' + ' ' + TotalPayWeek)
  * Use an alert to show the results of each problem.
  * Finally, commit the changes to your git repository, and push to GitHub.
  */
+
 
 
 
