@@ -13,7 +13,7 @@
  */
 
 function sayHello(userName) {
-    return ("hello" + ' ' + userName)
+    return "hello" + ' ' + userName
 
 }
 //console.log(sayHello('Leonard'));
@@ -69,7 +69,7 @@ console.log(isTwo(1));
 console.log(isTwo(2));
 console.log(isTwo(3));
 
-console.log(isTwo(random)); // is using the random code: var random = Math.floor((Math.random() * 3) + 1);
+console.log(isTwo(random), "This is the random number: " + random); // is using the random code: var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -83,7 +83,7 @@ console.log(isTwo(random)); // is using the random code: var random = Math.floor
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 function calculateTip(tip, bill) {
-    return (tip * bill)
+    return tip * bill;
 }
 
 console.log(calculateTip(0.20, 20));
@@ -119,7 +119,7 @@ alert('Based off your answers, you should tip ' + '$' + calculateTip(tip, bill).
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 function applyDiscount(originalPrice, discountPercent) {
-    return (originalPrice - (originalPrice * discountPercent));
+    return originalPrice - (originalPrice * discountPercent);
 }
 
 console.log(applyDiscount(10, .10).toFixed(2));
