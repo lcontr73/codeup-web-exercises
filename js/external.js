@@ -55,7 +55,8 @@ alert('You worked' + ' ' + facebookHours + ' ' + 'hours at Amazon this week.');
 let TotalPayWeek = "$" + ((googlePayPerHour * googleHours) + (amazonPayPerHour * amazonHours) + (facebookPayPerHour * facebookHours));
 
 
-alert('Your total pay for the week is' + ' ' + TotalPayWeek)
+alert('Your total pay for the week is' + ' ' + TotalPayWeek.toFixed(2));
+
 
 /**
  * A student can be enrolled in a class only if the class is not full and
