@@ -101,24 +101,26 @@
     //         alert ('I don\'t know anything about ' + colorPicked);
     //     }
     // }
+
+
     // analyzeColor(pickColor);
-    var pickColor = prompt('What is your favorite color?')
-    function analyzeColor(colorPicked) {
-        switch(true) {
-            case pickColor === 'blue':
-                alert('blue is the color of the sky');
-                break;
-            case pickColor === 'red':
-                alert('red is the color of strawberries');
-                break;
-            case pickColor === 'green':
-                alert('green is the color of grass');
-                break;
-            default:
-                alert('I don\'t know anything about ' + pickColor);
-        }
-    }
-    analyzeColor(pickColor);
+    // var pickColor = prompt('What is your favorite color?')
+    // function analyzeColor(colorPicked) {
+    //     switch(true) {
+    //         case pickColor === 'blue':
+    //             alert('blue is the color of the sky');
+    //             break;
+    //         case pickColor === 'red':
+    //             alert('red is the color of strawberries');
+    //             break;
+    //         case pickColor === 'green':
+    //             alert('green is the color of grass');
+    //             break;
+    //         default:
+    //             alert('I don\'t know anything about ' + pickColor);
+    //     }
+    // }
+    // analyzeColor(pickColor);
 
 
 
@@ -205,7 +207,29 @@
      * price before the discount was, and what their price after the discount is.
      */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var totalAmount = prompt('What was your total bill?')
+    alert('Your lucky number is: ' + luckyNumber);
+alert('Your total before discounts is $' + totalAmount);
+    function calculateTotal(luckyNumber, totalAmount){
+        if (luckyNumber === 0) {
+            alert(totalAmount - (totalAmount * 0.0));
+        } else if (luckyNumber === 1) {
+            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .10)));
+        } else if (luckyNumber === 2) {
+            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .25)));
+        } else if (luckyNumber === 3) {
+            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .35)));
+        } else if (luckyNumber === 4) {
+            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .50)));
+        } else if (luckyNumber === 5) {
+            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .100)));
+        }
+    }
+
+    calculateTotal(luckyNumber, totalAmount);
+
 
     /**
      * TODO:
