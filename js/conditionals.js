@@ -22,25 +22,24 @@
      * console.logging the function's return value
      */
 
-    //
-    // function analyzeColor(colorPicked) {
-    // console.log(colorPicked)
-    // if (colorPicked === 'blue') {
-    // console.log('blue is the color of the sky');
-    // } else if (colorPicked === 'red') {
-    //     console.log('Strawberries are red');
-    // } else if (colorPicked === 'green') {
-    //     console.log('Green is the color of grass');
-    // } else {
-    //     console.log('I don\'t know anything about ' + colorPicked);
-    // }
-    // }
-    //
-    // console.log(analyzeColor('yellow'));
-    // console.log(analyzeColor('green'));
-    // console.log(analyzeColor('blue'));
-    // console.log(analyzeColor('magenta'));
-
+        //
+        // function analyzeColor(colorPicked) {
+        // console.log(colorPicked)
+        // if (colorPicked === 'blue') {
+        // console.log('blue is the color of the sky');
+        // } else if (colorPicked === 'red') {
+        //     console.log('Strawberries are red');
+        // } else if (colorPicked === 'green') {
+        //     console.log('Green is the color of grass');
+        // } else {
+        //     console.log('I don\'t know anything about ' + colorPicked);
+        // }
+        // }
+        //
+        // console.log(analyzeColor('yellow'));
+        // console.log(analyzeColor('green'));
+        // console.log(analyzeColor('blue'));
+        // console.log(analyzeColor('magenta'));
 
 
 // Don't change the next two lines!
@@ -123,7 +122,6 @@
     // analyzeColor(pickColor);
 
 
-
     /* ########################################################################## */
 
     /**
@@ -194,10 +192,6 @@
     // calculateTotal(7, 100);
 
 
-
-
-
-
     /**
      * TODO:
      * Uncomment the line below to generate a random number between 0 and 5.
@@ -207,28 +201,28 @@
      * price before the discount was, and what their price after the discount is.
      */
 // Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-
-var totalAmount = prompt('What was your total bill?')
-    alert('Your lucky number is: ' + luckyNumber);
-alert('Your total before discounts is $' + totalAmount);
-    function calculateTotal(luckyNumber, totalAmount){
-        if (luckyNumber === 0) {
-            alert(totalAmount - (totalAmount * 0.0));
-        } else if (luckyNumber === 1) {
-            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .10)));
-        } else if (luckyNumber === 2) {
-            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .25)));
-        } else if (luckyNumber === 3) {
-            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .35)));
-        } else if (luckyNumber === 4) {
-            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .50)));
-        } else if (luckyNumber === 5) {
-            alert('Your total after discounts is $' + (totalAmount - (totalAmount * .100)));
-        }
-    }
-
-    calculateTotal(luckyNumber, totalAmount);
+// var luckyNumber = Math.floor(Math.random() * 6);
+//
+// var totalAmount = prompt('What was your total bill?')
+//     alert('Your lucky number is: ' + luckyNumber);
+// alert('Your total before discounts is $' + totalAmount);
+//     function calculateTotal(luckyNumber, totalAmount){
+//         if (luckyNumber === 0) {
+//             alert(totalAmount - (totalAmount * 0.0));
+//         } else if (luckyNumber === 1) {
+//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .10)));
+//         } else if (luckyNumber === 2) {
+//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .25)));
+//         } else if (luckyNumber === 3) {
+//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .35)));
+//         } else if (luckyNumber === 4) {
+//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .50)));
+//         } else if (luckyNumber === 5) {
+//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .100)));
+//         }
+//     }
+//
+//     calculateTotal(luckyNumber, totalAmount);
 
 
     /**
@@ -249,5 +243,31 @@ alert('Your total before discounts is $' + totalAmount);
      * Can you refactor your code to use functions?
      * HINT: The way we prompt for a value could be improved
      */
+    var wantToPlay = confirm('Would you like to enter a number?')
+    //Write some JavaScript that uses a `confirm` dialog to ask the user if they
+    // would like to enter a number. If they click 'Ok', prompt the user for a number
+    if (wantToPlay === true) {
+        var numberEntered = prompt('Please input a number: ');
+    } else
+        alert('You chose not to play.');
+
+    //whether the number is even or odd
+    if (numberEntered % 2 == 0) {
+        alert('Your number is even.');
+    } else {
+        alert('Your number is odd.');
+    }
+
+    //what the number plus 100 is
+    var addToNumberEntered = alert('Your number increased by 100 is: ' + (parseFloat(numberEntered) + 100));
+
+    // if the number is negative or positive
+    if (Math.sign(numberEntered) === 1) {
+        alert('Your number is positive.')
+    } else
+        alert('Your number is negative');
+
+
+
 
 })();
