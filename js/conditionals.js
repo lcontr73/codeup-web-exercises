@@ -146,20 +146,45 @@
     calculateTotal(4, 100);
     calculateTotal(5, 100);
 
+    // function calculateTotal(luckyNumber, totalAmount){
+    //     switch(luckyNumber, totalAmount) {
+    //         case luckyNumber:
+    //         console.log(totalAmount - (totalAmount * 0.0));
+    //         case 1:
+    //         console.log(totalAmount - (totalAmount * .10));
+    //         case 2:
+    //         console.log(totalAmount - (totalAmount * .25));
+    //         case 3:
+    //         console.log(totalAmount - (totalAmount * .35));
+    //         case 4:
+    //         console.log(totalAmount - (totalAmount * .50));
+    //         case 5:
+    //         console.log(totalAmount - (totalAmount * .100));
+    //     }
+    // }
+    // calculateTotal(0, 100);
+    // calculateTotal(4, 100);
+    // calculateTotal(5, 100);
 
     // function analyzeColor(colorPicked) {
-    // console.log(colorPicked)
-    // if (colorPicked === 'blue') {
-    // console.log('blue is the color of the sky');
-    // } else if (colorPicked === 'red') {
-    //     console.log('Strawberries are red');
-    // } else if (colorPicked === 'green') {
-    //     console.log('Green is the color of grass');
-    // } else {
-    //     console.log('I don\'t know anything about ' + colorPicked);
+    //     console.log(colorPicked)
+    //     switch(colorPicked) {
+    //         case 'blue':
+    //             console.log('blue is the color of the sky');
+    //             break;
+    //         case 'red':
+    //             console.log('Strawberries are red');
+    //             break;
+    //         case 'green':
+    //             console.log('Green is the color of grass');
+    //             break;
+    //         default:
+    //         console.log('I don\'t know anything about ' + colorPicked);
+    //     }
     // }
-    // }
-    //
+
+
+
 
     /**
      * TODO:
