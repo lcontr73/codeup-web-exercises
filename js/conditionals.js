@@ -128,43 +128,53 @@
      * return value.
      */
 
-    function calculateTotal(luckyNumber, totalAmount){
-        if (luckyNumber === 0) {
-            console.log(totalAmount - (totalAmount * 0.0));
-        } else if (luckyNumber === 1) {
-            console.log(totalAmount - (totalAmount * .10));
-        } else if (luckyNumber === 2) {
-            console.log(totalAmount - (totalAmount * .25));
-        } else if (luckyNumber === 3) {
-            console.log(totalAmount - (totalAmount * .35));
-        } else if (luckyNumber === 4) {
-            console.log(totalAmount - (totalAmount * .50));
-        } else if (luckyNumber === 5) {
-            console.log(totalAmount - (totalAmount * .100));}
-    }
-    calculateTotal(0, 100);
-    calculateTotal(4, 100);
-    calculateTotal(5, 100);
-
     // function calculateTotal(luckyNumber, totalAmount){
-    //     switch(luckyNumber, totalAmount) {
-    //         case luckyNumber:
+    //     if (luckyNumber === 0) {
     //         console.log(totalAmount - (totalAmount * 0.0));
-    //         case 1:
+    //     } else if (luckyNumber === 1) {
     //         console.log(totalAmount - (totalAmount * .10));
-    //         case 2:
+    //     } else if (luckyNumber === 2) {
     //         console.log(totalAmount - (totalAmount * .25));
-    //         case 3:
+    //     } else if (luckyNumber === 3) {
     //         console.log(totalAmount - (totalAmount * .35));
-    //         case 4:
+    //     } else if (luckyNumber === 4) {
     //         console.log(totalAmount - (totalAmount * .50));
-    //         case 5:
-    //         console.log(totalAmount - (totalAmount * .100));
-    //     }
+    //     } else if (luckyNumber === 5) {
+    //         console.log(totalAmount - (totalAmount * .100));}
     // }
     // calculateTotal(0, 100);
     // calculateTotal(4, 100);
     // calculateTotal(5, 100);
+
+    function calculateTotal(luckyNumber, totalAmount){
+        switch(true) {
+            case luckyNumber === 0:
+                console.log(totalAmount - (totalAmount * 0.0));
+                break;
+            case luckyNumber === 1:
+                console.log(totalAmount - (totalAmount * 0.10));
+                break;
+            case luckyNumber === 2:
+                console.log(totalAmount - (totalAmount * 0.25));
+                break;
+            case luckyNumber === 3:
+                console.log(totalAmount - (totalAmount * 0.35));
+                break;
+            case luckyNumber === 4:
+                console.log(totalAmount - (totalAmount * 0.50));
+                break;
+            case luckyNumber === 5:
+                console.log(totalAmount - (totalAmount * 1.0));
+                break;
+            default:
+                console.log('That is not a lucky number.')
+        }
+    }
+    calculateTotal(0, 100);
+    calculateTotal(4, 100);
+    calculateTotal(5, 100);
+    calculateTotal(7, 100);
+
 
     // function analyzeColor(colorPicked) {
     //     console.log(colorPicked)
