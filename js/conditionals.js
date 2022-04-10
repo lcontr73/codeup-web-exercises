@@ -102,8 +102,24 @@
     //     }
     // }
     // analyzeColor(pickColor);
+    var pickColor = prompt('What is your favorite color?')
+    function analyzeColor(colorPicked) {
+        switch(true) {
+            case pickColor === 'blue':
+                alert('blue is the color of the sky');
+                break;
+            case pickColor === 'red':
+                alert('red is the color of strawberries');
+                break;
+            case pickColor === 'green':
+                alert('green is the color of grass');
+                break;
+            default:
+                alert('I don\'t know anything about ' + pickColor);
+        }
+    }
+    analyzeColor(pickColor);
 
- 
 
 
     /* ########################################################################## */
@@ -146,52 +162,36 @@
     // calculateTotal(4, 100);
     // calculateTotal(5, 100);
 
-    function calculateTotal(luckyNumber, totalAmount){
-        switch(true) {
-            case luckyNumber === 0:
-                console.log(totalAmount - (totalAmount * 0.0));
-                break;
-            case luckyNumber === 1:
-                console.log(totalAmount - (totalAmount * 0.10));
-                break;
-            case luckyNumber === 2:
-                console.log(totalAmount - (totalAmount * 0.25));
-                break;
-            case luckyNumber === 3:
-                console.log(totalAmount - (totalAmount * 0.35));
-                break;
-            case luckyNumber === 4:
-                console.log(totalAmount - (totalAmount * 0.50));
-                break;
-            case luckyNumber === 5:
-                console.log(totalAmount - (totalAmount * 1.0));
-                break;
-            default:
-                console.log('That is not a lucky number.')
-        }
-    }
-    calculateTotal(0, 100);
-    calculateTotal(4, 100);
-    calculateTotal(5, 100);
-    calculateTotal(7, 100);
-
-
-    // function analyzeColor(colorPicked) {
-    //     console.log(colorPicked)
-    //     switch(colorPicked) {
-    //         case 'blue':
-    //             console.log('blue is the color of the sky');
+    // function calculateTotal(luckyNumber, totalAmount){
+    //     switch(true) {
+    //         case luckyNumber === 0:
+    //             console.log(totalAmount - (totalAmount * 0.0));
     //             break;
-    //         case 'red':
-    //             console.log('Strawberries are red');
+    //         case luckyNumber === 1:
+    //             console.log(totalAmount - (totalAmount * 0.10));
     //             break;
-    //         case 'green':
-    //             console.log('Green is the color of grass');
+    //         case luckyNumber === 2:
+    //             console.log(totalAmount - (totalAmount * 0.25));
+    //             break;
+    //         case luckyNumber === 3:
+    //             console.log(totalAmount - (totalAmount * 0.35));
+    //             break;
+    //         case luckyNumber === 4:
+    //             console.log(totalAmount - (totalAmount * 0.50));
+    //             break;
+    //         case luckyNumber === 5:
+    //             console.log(totalAmount - (totalAmount * 1.0));
     //             break;
     //         default:
-    //         console.log('I don\'t know anything about ' + colorPicked);
+    //             console.log('That is not a lucky number.')
     //     }
     // }
+    // calculateTotal(0, 100);
+    // calculateTotal(4, 100);
+    // calculateTotal(5, 100);
+    // calculateTotal(7, 100);
+
+
 
 
 
