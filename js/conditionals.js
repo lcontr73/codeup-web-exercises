@@ -88,27 +88,22 @@
      * user to your `analyzeColor` function. Alert the return value from your
      * function to show it to the user.
      */
-    var pickColor = prompt('What is your favorite color?');
-
-    function analyzeColor(colorPicked) {
-        if (colorPicked === 'blue') {
-            alert ('blue is the color of the sky');
-        } else if (colorPicked === 'red') {
-            alert ('Strawberries are red');
-        } else if (colorPicked === 'green') {
-            alert ('Green is the color of grass');
-        } else {
-            alert ('I don\'t know anything about ' + colorPicked);
-        }
-    }
-    analyzeColor(pickColor);
+    // var pickColor = prompt('What is your favorite color?');
+    //
+    // function analyzeColor(colorPicked) {
+    //     if (colorPicked === 'blue') {
+    //         alert ('blue is the color of the sky');
+    //     } else if (colorPicked === 'red') {
+    //         alert ('Strawberries are red');
+    //     } else if (colorPicked === 'green') {
+    //         alert ('Green is the color of grass');
+    //     } else {
+    //         alert ('I don\'t know anything about ' + colorPicked);
+    //     }
+    // }
+    // analyzeColor(pickColor);
 
  
-
-
-
-
-
 
 
     /* ########################################################################## */
@@ -132,6 +127,39 @@
      * Test your function by passing it various values and checking for the expected
      * return value.
      */
+
+    function calculateTotal(luckyNumber, totalAmount){
+        if (luckyNumber === 0) {
+            console.log(totalAmount - (totalAmount * 0.0));
+        } else if (luckyNumber === 1) {
+            console.log(totalAmount - (totalAmount * .10));
+        } else if (luckyNumber === 2) {
+            console.log(totalAmount - (totalAmount * .25));
+        } else if (luckyNumber === 3) {
+            console.log(totalAmount - (totalAmount * .35));
+        } else if (luckyNumber === 4) {
+            console.log(totalAmount - (totalAmount * .50));
+        } else if (luckyNumber === 5) {
+            console.log(totalAmount - (totalAmount * .100));}
+    }
+    calculateTotal(0, 100);
+    calculateTotal(4, 100);
+    calculateTotal(5, 100);
+
+
+    // function analyzeColor(colorPicked) {
+    // console.log(colorPicked)
+    // if (colorPicked === 'blue') {
+    // console.log('blue is the color of the sky');
+    // } else if (colorPicked === 'red') {
+    //     console.log('Strawberries are red');
+    // } else if (colorPicked === 'green') {
+    //     console.log('Green is the color of grass');
+    // } else {
+    //     console.log('I don\'t know anything about ' + colorPicked);
+    // }
+    // }
+    //
 
     /**
      * TODO:
