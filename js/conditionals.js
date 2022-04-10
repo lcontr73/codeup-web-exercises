@@ -22,7 +22,7 @@
      * console.logging the function's return value
      */
 
-
+    //
     // function analyzeColor(colorPicked) {
     // console.log(colorPicked)
     // if (colorPicked === 'blue') {
@@ -61,22 +61,22 @@
      * TODO:
      * Comment out the code above, and refactor your function to use a switch-case statement
      */
-    function analyzeColor(colorPicked) {
-        console.log(colorPicked)
-        switch(colorPicked) {
-            case 'blue':
-                console.log('blue is the color of the sky');
-                break;
-            case 'red':
-                console.log('Strawberries are red');
-                break;
-            case 'green':
-                console.log('Green is the color of grass');
-                break;
-            default:
-            console.log('I don\'t know anything about ' + colorPicked);
-        }
-    }
+    // function analyzeColor(colorPicked) {
+    //     console.log(colorPicked)
+    //     switch(colorPicked) {
+    //         case 'blue':
+    //             console.log('blue is the color of the sky');
+    //             break;
+    //         case 'red':
+    //             console.log('Strawberries are red');
+    //             break;
+    //         case 'green':
+    //             console.log('Green is the color of grass');
+    //             break;
+    //         default:
+    //         console.log('I don\'t know anything about ' + colorPicked);
+    //     }
+    // }
     //
     // console.log(analyzeColor('purple'));
     // console.log(analyzeColor('yellow'));
@@ -88,10 +88,24 @@
      * user to your `analyzeColor` function. Alert the return value from your
      * function to show it to the user.
      */
+    var pickColor = prompt('What is your favorite color?');
 
-        var pickYourColor = prompt('What is your favorite color?');
+    function analyzeColor(colorPicked) {
+        if (colorPicked === 'blue') {
+            alert ('blue is the color of the sky');
+        } else if (colorPicked === 'red') {
+            alert ('Strawberries are red');
+        } else if (colorPicked === 'green') {
+            alert ('Green is the color of grass');
+        } else {
+            alert ('I don\'t know anything about ' + colorPicked);
+        }
+    }
+    analyzeColor(pickColor);
 
-        analyzeColor(pickYourColor);
+ 
+
+
 
 
 
