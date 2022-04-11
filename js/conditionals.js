@@ -22,7 +22,7 @@
      * console.logging the function's return value
      */
 
-        //
+
         // function analyzeColor(colorPicked) {
         // console.log(colorPicked)
         // if (colorPicked === 'blue') {
@@ -35,11 +35,11 @@
         //     console.log('I don\'t know anything about ' + colorPicked);
         // }
         // }
-        //
+
         // console.log(analyzeColor('yellow'));
-        // console.log(analyzeColor('green'));
-        // console.log(analyzeColor('blue'));
-        // console.log(analyzeColor('magenta'));
+        // // console.log(analyzeColor('green'));
+        // // console.log(analyzeColor('blue'));
+        // // console.log(analyzeColor('magenta'));
 
 
 // Don't change the next two lines!
@@ -54,7 +54,7 @@
      * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
      * You should see a different message every time you refresh the page
      */
-    //console.log(analyzeColor(randomColor));
+    // console.log(analyzeColor(randomColor));
 
     /**
      * TODO:
@@ -100,9 +100,9 @@
     //         alert ('I don\'t know anything about ' + colorPicked);
     //     }
     // }
-
-
+    //
     // analyzeColor(pickColor);
+
     // var pickColor = prompt('What is your favorite color?')
     // function analyzeColor(colorPicked) {
     //     switch(true) {
@@ -202,7 +202,7 @@
      */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-//
+// //
 // var totalAmount = prompt('What was your total bill?')
 //     alert('Your lucky number is: ' + luckyNumber);
 // alert('Your total before discounts is $' + totalAmount);
@@ -243,9 +243,11 @@
      * Can you refactor your code to use functions?
      * HINT: The way we prompt for a value could be improved
      */
+    // Write some JavaScript that uses a `confirm` dialog to ask the user if they
+        // would like to enter a number. If they click 'Ok', prompt the user for a number
+
     var wantToPlay = confirm('Would you like to enter a number?')
-    //Write some JavaScript that uses a `confirm` dialog to ask the user if they
-    // would like to enter a number. If they click 'Ok', prompt the user for a number
+
     if (wantToPlay !== true) {
         alert('You chose not to play.');
         return;
@@ -255,6 +257,7 @@
     // Do *NOT* display any of the above information
     // if the user enters a value that is not of the number data type.
     // Instead, use an alert to inform them of the incorrect input data type.
+
     if(isNaN(numberEntered)) {
         alert('You need to use a numerical value.');
         return;
