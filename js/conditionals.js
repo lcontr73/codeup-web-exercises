@@ -248,8 +248,19 @@
     // would like to enter a number. If they click 'Ok', prompt the user for a number
     if (wantToPlay === true) {
         var numberEntered = prompt('Please input a number: ');
-    } else
+    } else {
         alert('You chose not to play.');
+    }
+
+    // Do *NOT* display any of the above information
+    // if the user enters a value that is not of the number data type.
+    // Instead, use an alert to inform them of the incorrect input data type.
+    if(isNaN(numberEntered)) {
+        alert('You need to use a numerical value.');
+        return;
+    } else {
+        alert('You chose a numerical value')
+    }
 
     //whether the number is even or odd
     if (numberEntered % 2 == 0) {
@@ -266,6 +277,8 @@
         alert('Your number is positive.')
     } else
         alert('Your number is negative');
+
+
 
 
 
