@@ -246,12 +246,12 @@
     var wantToPlay = confirm('Would you like to enter a number?')
     //Write some JavaScript that uses a `confirm` dialog to ask the user if they
     // would like to enter a number. If they click 'Ok', prompt the user for a number
-    if (wantToPlay === true) {
-        var numberEntered = prompt('Please input a number: ');
-    } else {
+    if (wantToPlay !== true) {
         alert('You chose not to play.');
+        return;
+    } else {
+        var numberEntered = prompt('Please input a number: ');
     }
-
     // Do *NOT* display any of the above information
     // if the user enters a value that is not of the number data type.
     // Instead, use an alert to inform them of the incorrect input data type.
