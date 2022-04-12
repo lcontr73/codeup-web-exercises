@@ -6,7 +6,7 @@
                 console.log(num + " x " + i + " = " + num * i);
             }
     }
-    showMultiplicationTable(7)
+    showMultiplicationTable(10)
 
 
 
