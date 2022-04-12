@@ -55,12 +55,12 @@
 
 
         // TODO: Do-While Loops
-    // var condition = true;
-    //
-    // do {
-    //  console.log('Ran!');
-    //  condition = false; //condition is Already false when it gets to the while statmement
-    // } while (condition);
+        // var condition = true;
+        //
+        // do {
+        //  console.log('Ran!');
+        //  condition = false; //condition is Already false when it gets to the while statement
+        // } while (condition);
 
         // Notes
         // var count = 50;
@@ -92,18 +92,16 @@
         // } while(choreCount > 0 && isMomHome);
 
 
-
         //  1.  Create a do-while loop that counts to 10 by 2’s
         //      A. It will increment the count by 2 for each loop
         //      B. It will log the value of count to the console on each loop.
 
-        var incrementor = 0;
-
-        do {
-            console.log('incrementor: ', incrementor)// your logic
-            incrementor +=2;
-        } while(incrementor <= 10);
-
+        // var incrementor = 0;
+        //
+        // do {
+        //     console.log('incrementor: ', incrementor)// your logic
+        //     incrementor +=2;
+        // } while(incrementor <= 10);
 
 
         // 2.   Create a do-while loop that console logs the number if it's odd.
@@ -111,28 +109,133 @@
         //      B. Only print out the value if it's odd.
         //      C. End the loop when the number reaches 50.
 
-        var number = 0;
-
-        do {
-            if(number % 2 === 1); console.log('number: ', number);
-            number++;
-        } while(number <=50);
-
+        // var number = 0;
+        //
+        // do {
+        //     if(number % 2 === 1); console.log('number: ', number);
+        //     number++;
+        // } while(number <=50);
 
 
         // TODO: For LOOPs
+        // Notes
+        //A loop that is used to check for certain conditions and then repeatedly runs a block of code if the
+        // conditions pass.
+        // for ((initialization; condition; increment)
+        //     //body
+
+
+        // Example
+        // for (var i = 0; i < 10; i++)
+        // var i = loop initialization
+        // i < 10 is the check on condition
+        // i++ is the increment
+        //console.log('Loop has ran " + i + 'times'); is the Run Cod in Block
+
+        // // For Loops Examples
+        // for(var x = 0; x < 10; x++) {
+        //     console.log(x + ' for loop count');
+        // }
+        //
+        // //Jumps two at a time
+        // for (var i = 0; i < 100; i+=2){
+        //     console.log("i-1:", i);
+        // }
+        //
+        // for (var i = 0; i < 100; i++){
+        //     console.log("i-2:", i);
+        // }
+        //
+        // for (var i = 0, j = 2; i < 10; i++, j--){
+        //     console.log("i,j:", i, j);
+        // }
+
 
         // 1.   Create a for loop that goes to 100 from 0.
         //      A. It will print out the number if it's even.
         //      B. It will print out the number if it's divisible by five evenly.
         //      C. If it's both A and B then it should print out the string "BOTH" instead of the number for that iteration.
+// for (var i = 0; i < 100; i++) {
+//     if(i % 2 === 0){
+//         console.log(i);
+//     } else if(i % 5 === 0){
+//         console.log(i);
+//     } else if(i % 2 === 0 && i % 5 === 0){
+//         console.log('BOTH ' + i);
+//     }}
 
+// My Solution
+        for (var i = 0; i < 100; i++) {
+            if (i % 2 === 0 && i % 5 === 0) {
+                console.log("Both")
+            } else if (i % 2 === 0) {
+                console.log(i);
+            } else if (i % 5 === 0) {
+                console.log(i);
+            }
+        }
+
+// Instructor Solution
+        for (var i = 0; i < 100; i++) {
+
+            var isDivisibleBy2 = (i % 2 === 0); // evens
+            var isDivisibleBy5 = (i % 5 === 0); // % 5
+            // if its even / divisible by 2 evenly.
+            // if its even / divisible by 5 evenly.
+            if (isDivisibleBy2 && isDivisibleBy5) console.log('both')
+            // if its even / divisible by 2 evenly
+            if (isDivisibleBy2 && !isDivisibleBy5) console.log(i)
+            // if its divisible by 2 evenly
+            if (isDivisibleBy5 && !isDivisibleBy2) console.log(i)
+        }
 
         // 2. Create a for loop that runs 50 times with an increment variable starting at zero.
         //     A. Create a variable called total to store the total value of the incrementer.
         //     B. Log the current total  on each loop.
         //     C. Log the sum of all the incrementer values (0+1+2+3….) after the loop has completed.
 
+        var total = 0
+        for (var i = 0; i < 50; i++) {
+            total += i; // accumulate the value by adding the current value
+            console.log('sub total:', total)
+        }
+        console.log('total:', total)
+
+
+        //    Examples for Break and Continue -Control Statement
+        var numberToBreakAt = 90;
+        var numberToContinueAt = 50;
+
+        for (var i = 1; i < 100; i++) {
+            if (i === numberToContinueAt) {
+                console.log("Going to next iteration")
+                continue;
+            }
+
+
+            console.log('log always');
+
+            if (i === numberToBreakAt) {
+                console.log('Going to kill the loop!');
+                break;
+                console.log('You will never see this line.');
+            }}
+
+
+            var count = 0;
+            while (count < 10) {
+                count++;
+                if (count === 5) continue;
+                console.log('count', count)
+            }
+
+            count = 0;
+            do {
+                count++;
+                if (count === 3) break; //END the loop
+                console.log("second-count", count)
+
+            } while (true)
 
 
     })();
