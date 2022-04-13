@@ -20,8 +20,35 @@
     // 3. Use a loop and the continue statement to output all the odd numbers between 1 and 50,
     // except for the number the user entered.
 
+    // var count = 0;
+    // while (count < 10) {
+    //     count++;
+    //     if (count === 5) continue;
+    //     console.log('count', count)
+    // }
+    //
+    // count = 0;
+    // do {
+    //     count++;
+    //     if (count === 3) break; //END the loop
+    //     console.log("second-count", count)
+    //
+    // } while (true)
 
+    var pickANumber = parseFloat(prompt('Pick an Odd number between 1 and 50')); //sets the initial value starting at 0
+    var count
+    while (count <= 50) {
+        count++;
+        if (count === pickANumber) continue;
+        console.log("Yikes! Skipping number:" + pickANumber);
+    }
+    var count = 0
+    do {
+        count++;
+        if (count === 50) break; //END the loop
+        console.log("second-count", count)
 
+    } while (true)
 
 
 
