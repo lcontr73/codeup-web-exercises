@@ -35,21 +35,23 @@
     //
     // } while (true)
 
-    var pickANumber = parseFloat(prompt('Pick an Odd number between 1 and 50'));
     var count = 0;
     while (count < 50) {
         count++;
 
-        if (count === pickANumber) continue;
-            console.log('count', count)
+        if (count === number) ;
+        console.log('We skipped it: ', number)
+        continue;
     }
-    var count = 0
-    do {
-        count++;
-        if (count === 50) break; //END the loop
-        console.log("second-count")
+    console.log(count);
 
-    } while (true)
+    // var count = 0
+    // do {
+    //     count++;
+    //     if (count === 50) break; //END the loop
+    //     console.log("second-count", count)
+    //
+    // } while (true)
 
 
 
