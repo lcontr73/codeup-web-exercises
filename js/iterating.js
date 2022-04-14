@@ -1,5 +1,5 @@
-"use strict";
 (function(){
+    "use strict";
 
 
     /**
@@ -8,10 +8,10 @@
      * 'names'.
      */
 
- var names = ['sara', 'bill', 'hank', 'dale']
+ var names = ['Sara', 'Bill', 'Hank', 'Dale']
 
 
-// var names = ["Bob", "Sara", "Tom", "Jane"];
+
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
@@ -21,20 +21,15 @@ console.log(names.length);
 
 
 
-
-
-
-
-    // console.log(names.length);
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-    // console.log(names[0]);
-    // console.log(names[1]);
-    // console.log(names[2]);
-    // console.log(names[3]);
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
 
 
@@ -44,9 +39,9 @@ console.log(names.length);
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-// for (var i = 0; i < names.length; i += 1) {
-//     console.log(names[i]);
-// }
+for (var i = 0; i < names.length; i += 1) {
+    console.log(names[i]);
+}
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
@@ -69,38 +64,44 @@ console.log(names.length);
      */
     var numbersList = [1, 2, 3, 4, 5]
     function myPick1(numbersList){
-      console.log(numbersList[0]);
+      return (numbersList[0]);
     }
     myPick1(numbersList);
 
     function myPick2(numbersList){
-        console.log(numbersList[1])
+        return (numbersList[1])
     }
     myPick2(numbersList);
 
     function myPickLast(numbersList){
-        console.log(numbersList[numbersList.length -1])
+        return(numbersList[numbersList.length -1])
     }
     myPickLast(numbersList);
 
-    function numbersLog1(numbersList) {
-        for (var i = 0; i < numbersList.length; i +=1) {
-            console.log(numbersList[0]);
-        }
-    }
-    console.log(numbersLog1(numbersList));
 
-    function numbersLog2(numbersList) {
-        for (var i = 0; i < numbersList.length; i += 1) {
-            console.log(numbersList[1]);
-        }
-    }
-    console.log(numbersLog2(numbersList));
+    console.log(myPick1([1,2,3,4,5]),1); //returns 1
+    console.log(myPick1([1,2,3,4,5]),2); //returns 1
+    console.log(myPick1([1,2,3,4,5]),myPickLast(numbersList) ); //returns 1
+    // console.log(myPick1([1,2,3,4,5]),1); //returns 1
 
-    function numbersLogLast(numbersList) {
-        for (var i = 0; i < numbersList.length; i +=1) {
-            console.log(numbersList[numbersList.length -1]);
-        }
-    }
-    console.log(numbersLogLast(numbersList));
+    // function numbersLog1(numbersList) {
+    //     for (var i = 0; i < numbersList.length; i +=1) {
+    //         console.log(numbersList[0]);
+    //     }
+    // }
+    // console.log(numbersLog1(numbersList));
+    //
+    // function numbersLog2(numbersList) {
+    //     for (var i = 0; i < numbersList.length; i += 1) {
+    //         console.log(numbersList[1]);
+    //     }
+    // }
+    // console.log(numbersLog2(numbersList));
+    //
+    // function numbersLogLast(numbersList) {
+    //     for (var i = 0; i < numbersList.length; i +=1) {
+    //         console.log(numbersList[numbersList.length -1]);
+    //     }
+    // }
+    // console.log(numbersLogLast(numbersList));
 })();
