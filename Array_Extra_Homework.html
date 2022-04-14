@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    (function () {
+
+        // !! Write a function, returnLongString, that takes in an array of strings and
+        // returns all strings concatenated together !!
+        // function returnLongString(string) {
+        //     var bigString = '';
+        //     string.forEach(function (string) {
+        //         bigString += string;
+        //     });
+        //     return bigString
+        // }
+        // var strings = ['Justine', 'David', 'Jay', 'Javier', 'Dane'];
+        // console.log(returnLongString(strings)); // returns 'JustineDavidJayJavierDane';
+// //	start with an empty string variable
+//             var bigString = '';
+//
+// //	loop through all string elements and concatenate to string variable
+//             strings.forEach(function (string) {
+//                 bigString += string;
+//             });
+//
+//             // return bigString
+//             //
+//             // var strings = ['Justine', 'David', 'Jay', 'Javier', 'Dane'];
+//             //
+//             // console.log(returnLongString(strings)); // returns 'JustingDavidJayJavierDane';
+//
+//
+// //solve the problem with a for loop
+// //             for(var i = 0; I < strings.length; I += 1) {
+// //                 console.log(strings[i]);
+// //                 // bigString += string;
+// //             }
+// //             Return bigString;
+
+        // !! Write a function, returnArrSum, that takes in an array of values and returns the
+        // sum of all number elements !!
+
+        function returnArrSum(values) {
+            //create an output variable
+            var output = 0;
+            // loop through the values and add the numbers
+            // // For each version
+            // values.forEach(function(value) {
+            //     //only add the value if it is a number
+            //     //only add if value is typeof 'number'
+            //     if(typeof value === 'number') {
+            //         output += value;
+            //     }
+            // });
+
+            // For Loop
+            for (var i = 0; i < values.length; i +=1) {
+                // only add values if value is typeof 'number'
+                if (typeof values[i] === 'number'){
+                    output +=values[i];
+                }
+            }
+            return output
+        }
+        var value = [1, null, 'hello', 5]; //NAN hello5
+        console.log(returnArrSum(value))
+
+
+        /* !! Write a function, checkIfNumInArray, that takes in an array of numbers and a number and returns the string
+                'input num in input array' if the second argument is an element in the first argument array
+                otherwise, the function should return the string 'input num NOT in input array'
+           !!
+
+         */
+    })();
+</script>
+
+</html>
