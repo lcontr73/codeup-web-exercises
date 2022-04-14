@@ -32,7 +32,9 @@ for (var i = 0; i < names.length; i += 1) {
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-
+    names.forEach(function(element, index, array){
+        console.log(element);
+    });
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -46,5 +48,40 @@ for (var i = 0; i < names.length; i += 1) {
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    var numbersList = [1, 2, 3, 4, 5]
+    function myPick1(numbersList){
+      console.log(numbersList[0]);
+    }
+    myPick1(numbersList);
 
+    function myPick2(numbersList){
+        console.log(numbersList[1])
+    }
+    myPick2(numbersList);
+
+    function myPickLast(numbersList){
+        console.log(numbersList[numbersList.length -1])
+    }
+    myPickLast(numbersList);
+
+    // function numbersLog1(numbersList) {
+    //     for (var i = 0; i < numbersList.length; i +=1) {
+    //         console.log(numbersList[0]);
+    //     }
+    // }
+    // console.log(numbersLog1(numbersList));
+    //
+    // function numbersLog2(numbersList) {
+    //     for (var i = 0; i < numbersList.length; i += 1) {
+    //         console.log(numbersList[1]);
+    //     }
+    // }
+    // console.log(numbersLog2(numbersList));
+    //
+    // function numbersLogLast(numbersList) {
+    //     for (var i = 0; i < numbersList.length; i +=1) {
+    //         console.log(numbersList[numbersList.length -1]);
+    //     }
+    // }
+    // console.log(numbersLogLast(numbersList));
 })();
