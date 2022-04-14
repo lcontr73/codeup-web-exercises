@@ -50,21 +50,43 @@ doubleNumber(2, 65536);
  */
 
 
-function generateRandomSales(){
-    return Math.floor(Math.random() *5) +1;
-    }
+// function generateRandomSales(){
+//     return Math.floor(Math.random() *5) +1;
+//     }
 
 // The output should be similar to the following
 //  function calculateConeSales(totalCones){
 //     do {
-//     var totalToSell = generateRandomSales();
+//     var totalToSell = Math.floor(Math.random() *5) +1;
 //
 //     var actualSoldAmount = (totalCones >= totalToSell) ? totalToSell : totalCones;
 //
-//     console.log("5 cones sold... ")
-//     console.log('Cannot sell you 6 cones I only have 3...");
+//         if(totalCones >= totalToSell) {
+//             //     actualSoldAmount = totalToSell;
+//             // } else {
+//             //     actualSoldAmount = totalCones
+//             //
 //
+//             if(totalToSell === actualSoldAmount) {
+//                 console.log(actualSoldAmount + " cones sold...  ")
+//             } else {
+//                 console.log("Cannot sell you " + totalToSell + " cones I only have "+ actualSoldAmount + "...")
+//             }
+//
+//             // console.log(
+//             //     (actualSoldAmount === totalToSell) ?
+//             //     actualSold + ' cones sold...' :
+//             //     "Cannot sell you " + totalToSell + " cones I only have "+ actualSoldAmount +"..."
+//             // );
+//
+//             totalCones -= actualSoldAmount;
+//
+//         } while (totalCones > 0);
+//
+//         console.log("Yay! I sold them all!")
 //
 //     }}
+//
+//         calculateConeSales(allCones);
 
 })();
