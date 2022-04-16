@@ -229,9 +229,22 @@ console.log('$' + totalPayPerWeek.toFixed(2));
 
 A student can be enrolled in a class only if the class is not full and the class schedule does not
     conflict with her current schedule.
+ */
+var classNotFull = true
+var noClassScheduleConflict = true
+
+var studentEnrolled = classNotFull && noClassScheduleConflict;
+
+console.log(studentEnrolled);
+
+
+
+
+/**
     A product offer can be applied only if a person buys more than 2 items, and the offer has not expired.
     Premium members do not need to buy a specific amount of products.
 */
+
 
 
 
