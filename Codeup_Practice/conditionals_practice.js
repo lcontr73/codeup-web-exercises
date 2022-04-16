@@ -51,7 +51,7 @@ function analyzeColor(input) {
      * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
      * You should see a different message every time you refresh the page
      */
-// console.log(analyzeColor(randomColor));
+console.log(analyzeColor(randomColor));
     /**
      * TODO:
      * Comment out the code above, and refactor your function to use a switch-case statement
@@ -79,7 +79,9 @@ switch(randomColor) {
      * user to your `analyzeColor` function. Alert the return value from your
      * function to show it to the user.
      */
+var pickAColor = prompt('What color do you like?');
 
+    alert(analyzeColor(pickAColor));
 
     /* ########################################################################## */
 
@@ -102,6 +104,29 @@ switch(randomColor) {
      * Test your function by passing it various values and checking for the expected
      * return value.
      */
+var luckyNumber = Math.floor((Math.random() * 6));
+
+function calculateTotal(numberPicked, amountBeforeDiscount){
+    if (numberPicked === 0) {
+        return (amountBeforeDiscount);
+    } else if (numberPicked === 1) {
+        return (amountBeforeDiscount - (amountBeforeDiscount * 0.1));
+    } else if (numberPicked === 2) {
+        return (amountBeforeDiscount - (amountBeforeDiscount * 0.25));
+    } else if (numberPicked === 3) {
+        return (amountBeforeDiscount - (amountBeforeDiscount * .35));
+    } else if (numberPicked === 4) {
+        return (amountBeforeDiscount - (amountBeforeDiscount * .50));
+    } else if (numberPicked === 5) {
+        return (amountBeforeDiscount - (amountBeforeDiscount * 1));
+    }
+
+}
+
+console.log(calculateTotal(0,100)); // returns 100
+console.log(calculateTotal(4,100)); // returns 50
+console.log(calculateTotal(5,100)); // returns 0
+console.log(calculateTotal(luckyNumber,100) + ' your lucky number is: ' + luckyNumber);
 
     /**
      * TODO:
