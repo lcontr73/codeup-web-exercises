@@ -131,23 +131,29 @@
      * return value.
      */
 
-    function calculateTotal(luckyNumber, totalAmount){
-        if (luckyNumber === 0) {
-            console.log(totalAmount - (totalAmount * 0.0));
-        } else if (luckyNumber === 1) {
-            console.log(totalAmount - (totalAmount * .10));
-        } else if (luckyNumber === 2) {
-            console.log(totalAmount - (totalAmount * .25));
-        } else if (luckyNumber === 3) {
-            console.log(totalAmount - (totalAmount * .35));
-        } else if (luckyNumber === 4) {
-            console.log(totalAmount - (totalAmount * .50));
-        } else if (luckyNumber === 5) {
-            console.log(totalAmount - (totalAmount * .100));}
+    var luckyNumber = Math.floor((Math.random() * 6));
+
+    function calculateTotal(numberPicked, amountBeforeDiscount){
+        if (numberPicked === 0) {
+            return (amountBeforeDiscount);
+        } else if (numberPicked === 1) {
+            return (amountBeforeDiscount - (amountBeforeDiscount * 0.1));
+        } else if (numberPicked === 2) {
+            return (amountBeforeDiscount - (amountBeforeDiscount * 0.25));
+        } else if (numberPicked === 3) {
+            return (amountBeforeDiscount - (amountBeforeDiscount * .35));
+        } else if (numberPicked === 4) {
+            return (amountBeforeDiscount - (amountBeforeDiscount * .50));
+        } else if (numberPicked === 5) {
+            return (amountBeforeDiscount - (amountBeforeDiscount * 1));
+        }
+
     }
-    calculateTotal(0, 100);
-    calculateTotal(4, 100);
-    calculateTotal(5, 100);
+
+    console.log(calculateTotal(0,100)); // returns 100
+    console.log(calculateTotal(4,100)); // returns 50
+    console.log(calculateTotal(5,100)); // returns 0
+    console.log(calculateTotal(luckyNumber,100) + ' your lucky number is: ' + luckyNumber);
 
     // function calculateTotal(luckyNumber, totalAmount){
     //     switch(true) {
