@@ -8,7 +8,7 @@
     Use the alert function to show a message that says 'Welcome to my Website!'.
     */
 
-   // alert('Welcome to my Website!');
+   alert('Welcome to my Website!');
 
    /**
    Use a prompt to ask for the user's favorite color. Use the user's response to alert a message that says
@@ -19,11 +19,11 @@
         "Great, blue is my favorite color too!"
     */
 
-   // var pickFavoriteColor = prompt('What is your favorite color?');
-   //
-   // if (pickFavoriteColor) {
-   //     alert('Great ' + pickFavoriteColor.toLowerCase() + ' is my favorite color too!');
-   // }
+   var pickFavoriteColor = prompt('What is your favorite color?');
+
+   if (pickFavoriteColor) {
+       alert('Great ' + pickFavoriteColor.toLowerCase() + ' is my favorite color too!');
+   }
 
    /**
    Complete exercise 3 from the previous lesson, but write your code in the external.js file instead of in the console.
@@ -37,30 +37,30 @@
     how much will you have to pay?
     */
 
-   // var littleMermaidDaysRented = Number(prompt('How many days would you like to rent The Little Mermaid?'));
-   // var brotherBearDaysRented = Number(prompt('How many days would you like to rent Brother Bear?'));
-   // var herculesDaysRented = Number(prompt('How many days would you like to rent Hercules?'));
-   //
-   // var rentalPricePerDayPerMovie = Number(prompt('How much does it cost to rent a movie for one day?'));
-   //
-   // var totalRentalPrice = ((rentalPricePerDayPerMovie * (littleMermaidDaysRented + brotherBearDaysRented + herculesDaysRented)));
-   // alert('$' + totalRentalPrice.toFixed(2));
+   var littleMermaidDaysRented = Number(prompt('How many days would you like to rent The Little Mermaid?'));
+   var brotherBearDaysRented = Number(prompt('How many days would you like to rent Brother Bear?'));
+   var herculesDaysRented = Number(prompt('How many days would you like to rent Hercules?'));
+
+   var rentalPricePerDayPerMovie = Number(prompt('How much does it cost to rent a movie for one day?'));
+
+   var totalRentalPrice = ((rentalPricePerDayPerMovie * (littleMermaidDaysRented + brotherBearDaysRented + herculesDaysRented)));
+   alert('$' + totalRentalPrice.toFixed(2));
 
    /**
     Suppose you're working as a contractor for 3 companies: Google, Amazon and Facebook, they pay you a different rate
     per hour. Google pays $400, Amazon $380, and Facebook $350. How much will you receive in payment for this week?
     You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazon.
    */
-    // var googlePayPerHour = Number(prompt('How much is your hourly rate at Google?'));
-    // var amazonPayPerHour = Number(prompt('How much is your hourly rate at Amazon?'));
-    // var facebookPayPerHour = Number(prompt('How much is your hourly rate at Facebook?'));
-    //
-    // var googleHoursWorked = Number(prompt('How many hours did you work at Google this week?'));
-    // var amazonHoursWorked = Number(prompt('How many hours did you work at Amazon this week?'));
-    // var facebookHoursWorked = Number(prompt('How many hours did you work at Facebook this week?'));
-    //
-    // var totalPayForTheWeek = ((googleHoursWorked * googlePayPerHour) + (amazonPayPerHour * amazonHoursWorked) + (facebookHoursWorked * facebookPayPerHour));
-    // alert('You made $' + totalPayForTheWeek + ' this week.');
+    var googlePayPerHour = Number(prompt('How much is your hourly rate at Google?'));
+    var amazonPayPerHour = Number(prompt('How much is your hourly rate at Amazon?'));
+    var facebookPayPerHour = Number(prompt('How much is your hourly rate at Facebook?'));
+
+    var googleHoursWorked = Number(prompt('How many hours did you work at Google this week?'));
+    var amazonHoursWorked = Number(prompt('How many hours did you work at Amazon this week?'));
+    var facebookHoursWorked = Number(prompt('How many hours did you work at Facebook this week?'));
+
+    var totalPayForTheWeek = ((googleHoursWorked * googlePayPerHour) + (amazonPayPerHour * amazonHoursWorked) + (facebookHoursWorked * facebookPayPerHour));
+    alert('You made $' + totalPayForTheWeek + ' this week.');
 
     /**
     A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with
