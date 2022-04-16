@@ -51,18 +51,35 @@ function analyzeColor(input) {
      * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
      * You should see a different message every time you refresh the page
      */
-console.log(analyzeColor(randomColor));
+// console.log(analyzeColor(randomColor));
     /**
      * TODO:
      * Comment out the code above, and refactor your function to use a switch-case statement
      */
+switch(randomColor) {
+    case 'blue':
+        console.log('blue is the color of the sky');
+        break;
+    case 'red':
+        console.log('Strawberries are red');
+        break;
+    case 'green':
+        console.log('green is the color of grass');
+        break;
+    default:
+        console.log('I don\'t know anything about ' + randomColor)
+        break;
+}
 
-    /**
+
+
+/**
      * TODO:
      * Prompt the user for a color when the page loads, and pass the input from the
      * user to your `analyzeColor` function. Alert the return value from your
      * function to show it to the user.
      */
+
 
     /* ########################################################################## */
 
