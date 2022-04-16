@@ -245,6 +245,19 @@ console.log(studentEnrolled);
     Premium members do not need to buy a specific amount of products.
 */
 
+var productOfferApplied = false
+
+var offNotExpired = true
+
+var premiumMember = true
+
+var moreThanTwoItemsPurchased = true
+
+if ((offNotExpired || premiumMember) && moreThanTwoItemsPurchased) {
+    console.log(productOfferApplied = true);
+}
+
+
 
 
 
