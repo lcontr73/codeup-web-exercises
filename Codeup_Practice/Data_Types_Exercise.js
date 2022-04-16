@@ -254,9 +254,9 @@ var premiumMember = true
 var moreThanTwoItemsPurchased = true
 
 if ((offNotExpired || premiumMember) && moreThanTwoItemsPurchased) {
-    console.log(productOfferApplied = true);
+    (productOfferApplied = true);
 }
-
+console.log(productOfferApplied);
 
 
 
