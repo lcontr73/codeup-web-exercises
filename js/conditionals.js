@@ -196,27 +196,12 @@
 // Generate a random number between 0 and 6
 var luckyNumber = Math.floor(Math.random() * 6);
 //
-// var totalAmount = prompt('What was your total bill?')
-//     alert('Your lucky number is: ' + luckyNumber);
-// alert('Your total before discounts is $' + totalAmount);
-//     function calculateTotal(luckyNumber, totalAmount){
-//         if (luckyNumber === 0) {
-//             alert(totalAmount - (totalAmount * 0.0));
-//         } else if (luckyNumber === 1) {
-//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .10)));
-//         } else if (luckyNumber === 2) {
-//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .25)));
-//         } else if (luckyNumber === 3) {
-//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .35)));
-//         } else if (luckyNumber === 4) {
-//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .50)));
-//         } else if (luckyNumber === 5) {
-//             alert('Your total after discounts is $' + (totalAmount - (totalAmount * .100)));
-//         }
-//     }
-//
-//     calculateTotal(luckyNumber, totalAmount);
+    var billBeforeDiscount = prompt('Please input your bill total.');
 
+    var billAfterDiscount = (calculateTotal(luckyNumber, billBeforeDiscount));
+    alert('Your lucky number is: ' + luckyNumber);
+    alert('Your price before discount is: $' + (parseFloat(billBeforeDiscount).toFixed(2)));
+    alert('Your price after discount is: $' + (parseFloat(billAfterDiscount).toFixed(2)));
 
     /**
      * TODO:
