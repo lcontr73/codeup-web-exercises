@@ -23,23 +23,23 @@
      */
 
 
-        // function analyzeColor(colorPicked) {
-        // console.log(colorPicked)
-        // if (colorPicked === 'blue') {
-        // console.log('blue is the color of the sky');
-        // } else if (colorPicked === 'red') {
-        //     console.log('Strawberries are red');
-        // } else if (colorPicked === 'green') {
-        //     console.log('Green is the color of grass');
-        // } else {
-        //     console.log('I don\'t know anything about ' + colorPicked);
-        // }
-        // }
-        //
-        // analyzeColor('yellow');
-        // analyzeColor('green');
-        // analyzeColor('blue');
-        // analyzeColor('magenta');
+        function analyzeColor(colorPicked) {
+        console.log(colorPicked)
+        if (colorPicked === 'blue') {
+        console.log('blue is the color of the sky');
+        } else if (colorPicked === 'red') {
+            console.log('Strawberries are red');
+        } else if (colorPicked === 'green') {
+            console.log('Green is the color of grass');
+        } else {
+            console.log('I don\'t know anything about ' + colorPicked);
+        }
+        }
+
+        analyzeColor('yellow');
+        analyzeColor('green');
+        analyzeColor('blue');
+        analyzeColor('magenta');
 
 
 // Don't change the next two lines!
@@ -88,25 +88,9 @@
      * function to show it to the user.
      */
     var pickColor = prompt('What is your favorite color?');
- analyzeColor(pickColor)
+ alert(analyzeColor(pickColor));
 
-    // var pickColor = prompt('What is your favorite color?')
-    // function analyzeColor(colorPicked) {
-    //     switch(true) {
-    //         case pickColor === 'blue':
-    //             alert('blue is the color of the sky');
-    //             break;
-    //         case pickColor === 'red':
-    //             alert('red is the color of strawberries');
-    //             break;
-    //         case pickColor === 'green':
-    //             alert('green is the color of grass');
-    //             break;
-    //         default:
-    //             alert('I don\'t know anything about ' + pickColor);
-    //     }
-    // }
-    // analyzeColor(pickColor);
+
 
 
     /* ########################################################################## */
@@ -222,42 +206,42 @@ var luckyNumber = Math.floor(Math.random() * 6);
      * HINT: The way we prompt for a value could be improved
      */
     // Write some JavaScript that uses a `confirm` dialog to ask the user if they
-        // would like to enter a number. If they click 'Ok', prompt the user for a number
+    //     would like to enter a number. If they click 'Ok', prompt the user for a number
 
-    // var wantToPlay = confirm('Would you like to enter a number?')
-    //
-    // if (wantToPlay !== true) {
-    //     alert('You chose not to play.');
-    //     return;
-    // } else {
-    //     var numberEntered = prompt('Please input a number: ');
-    // }
+    var wantToPlay = confirm('Would you like to enter a number?')
+
+    if (wantToPlay !== true) {
+        alert('You chose not to play.');
+        return;
+    } else {
+        var numberEntered = prompt('Please input a number: ');
+    }
     // Do *NOT* display any of the above information
     // if the user enters a value that is not of the number data type.
     // Instead, use an alert to inform them of the incorrect input data type.
 
-    // if(isNaN(numberEntered)) {
-    //     alert('You need to use a numerical value.');
-    //     return;
-    // } else {
-    //     alert('You chose a numerical value')
-    // }
+    if(isNaN(numberEntered)) {
+        alert('You need to use a numerical value.');
+        return;
+    } else {
+        alert('You chose a numerical value')
+    }
 
-    //whether the number is even or odd
-    // if (numberEntered % 2 == 0) {
-    //     alert('Your number is even.');
-    // } else {
-    //     alert('Your number is odd.');
-    // }
+    // whether the number is even or odd
+    if (numberEntered % 2 == 0) {
+        alert('Your number is even.');
+    } else {
+        alert('Your number is odd.');
+    }
 
-    //what the number plus 100 is
-    // var addToNumberEntered = alert('Your number increased by 100 is: ' + (parseFloat(numberEntered) + 100));
+    // what the number plus 100 is
+    var addToNumberEntered = alert('Your number increased by 100 is: ' + (parseFloat(numberEntered) + 100));
 
     // if the number is negative or positive
-    // if (Math.sign(numberEntered) === 1) {
-    //     alert('Your number is positive.')
-    // } else
-    //     alert('Your number is negative');
+    if (Math.sign(numberEntered) === 1) {
+        alert('Your number is positive.')
+    } else
+        alert('Your number is negative');
 
 
 
