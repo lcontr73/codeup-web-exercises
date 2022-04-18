@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Assessment</title>
+</head>
+<body>
+    <script>
+        (function(){
+            "use strict"
+            /**
+            Define a function named isBoolean that takes in a value and returns a boolean if the argument provided
+             is a boolean value or not.
+
+            isBoolean(true)             // true
+            isBoolean(false)            // true
+            isBoolean(0)                // false
+            isBoolean(null)             // false
+            isBoolean("")               // false
+            isBoolean("kwiw")           // false
+            isBoolean([1, 2])           // false
+             */
+            // function isBoolean(value) {
+            //     return(typeof value === 'boolean');
+            // }
+            // console.log(isBoolean(true));             // true
+            // console.log(isBoolean(false));            // true
+            // console.log(isBoolean(0));                // false
+            // console.log(isBoolean(null));             // false
+            // console.log(isBoolean(""));               // false
+            // console.log(isBoolean("kwiw"));           // false
+            // console.log(isBoolean([1, 2]));           // false
+
+            /**
+            Define a function named isString that takes in a value as an input and returns a boolean if the
+             input provided is a string or not. Numeric strings will count as strings and should return true.
+
+            isString("Hello")           // true
+            isString("Codeup")          // true
+            isString("123")             // true
+            isString(4)                 // false
+            isString(true)              // false
+            isString([1, 2, 3])         // false
+            isString()                  // false
+            isString(null)              // false
+            */
+
+            // function isString(value) {
+            //     return typeof value === 'string';
+            // }
+            //
+            // console.log(isString("Hello"));           // true
+            // console.log(isString("Codeup"));          // true
+            // console.log(isString("123"));             // true
+            // console.log(isString(4));                 // false
+            // console.log(isString(true));              // false
+            // console.log(isString([1, 2, 3]));         // false
+            // console.log(isString());                  // false
+            // console.log(isString(null));              // false
+
+            /**
+            Define a function named isNotString that accepts an input and returns true or false based on whether
+             an input is not a string. Numeric strings will count as strings and should return false.
+
+            isNotString(4)                 // true
+            isNotString(true)              // true
+            isNotString([1, 2, 3])         // true
+            isNotString()                  // true
+            isNotString(null)              // true
+            isNotString("Hello")           // false
+            isNotString("Codeup")          // false
+            isNotString("123")             // false
+            */
+
+            // function isNotString(input) {
+            //     return typeof input !== 'string';
+            // }
+            //
+            // console.log(isNotString(4));                 // true
+            // console.log(isNotString(true));              // true
+            // console.log(isNotString([1, 2, 3]));         // true
+            // console.log(isNotString());                  // true
+            // console.log(isNotString(null));              // true
+            // console.log(isNotString("Hello"));           // false
+            // console.log(isNotString("Codeup"));          // false
+            // console.log(isNotString("123"));             // false
+
+            /**
+            Define a function named isEmptyString that will return true when passed an argument with the value
+             of "", i.e. an empty string. All other arguments should return false.
+
+            isEmptyString("")                // true
+            isEmptyString(" ")               // false
+            isEmptyString("Hello")           // false
+            isEmptyString("Codeup")          // false
+            isEmptyString("123")             // false
+            isEmptyString(true)              // false
+            isEmptyString([1, 2, 3])         // false
+            isEmptyString(null)              // false
+            isEmptyString()                  // false
+            */
+
+            // function isEmptyString(value) {
+            //     return value === "";
+            // }
+            //
+            // console.log(isEmptyString(""));                // true
+            // console.log(isEmptyString(" "));               // false
+            // console.log(isEmptyString("Hello"));           // false
+            // console.log(isEmptyString("Codeup"));          // false
+            // console.log(isEmptyString("123"));             // false
+            // console.log(isEmptyString(true));              // false
+            // console.log(isEmptyString([1, 2, 3]));         // false
+            // console.log(isEmptyString(null));              // false
+            // console.log(isEmptyString());                  // false
+
+
+            /**
+            Define a function named isNotANumber that accepts an input and returns true or false based on whether an
+             input is a non-numeric value or not. Numbers as strings are not a number and should return true.
+
+            isNotANumber("")               // true
+            isNotANumber(true)             // true
+            isNotANumber("Bob")            // true
+            isNotANumber([1,2,3])          // true
+            isNotANumber("42")             // true
+            isNotANumber(23)               // false
+            isNotANumber(3.141)            // false
+            */
+
+            // function isNotANumber(input) {
+            //     return typeof input !== 'number'
+            // }
+            //
+            // console.log(isNotANumber(""));               // true
+            // console.log(isNotANumber(true));             // true
+            // console.log(isNotANumber("Bob"));            // true
+            // console.log(isNotANumber([1, 2, 3]));        // true
+            // console.log(isNotANumber("42"));             // true
+            // console.log(isNotANumber(23));               // false
+            // console.log(isNotANumber(3.141));            // false
+
+
+            /**
+            Define a function named isNegative that accepts a number and returns true or false based on whether the
+             input is less than zero.
+
+            isNegative(-1)              // true
+            isNegative(-5)              // true
+            isNegative("-3")            // true
+            isNegative(0)               // false
+            isNegative(6)               // false
+            isNegative("10")            // false
+            isNegative(true)            // false
+            isNegative(false)           // false
+            isNegative("Bob")           // false
+            isNegative([-1, 2, 3])      // false
+            isNegative(null)            // false
+            */
+
+            // function isNegative(number) {
+            //     return number < 0;
+            // }
+            //
+            // console.log(isNegative(-1));              // true
+            // console.log(isNegative(-5));              // true
+            // console.log(isNegative("-3"));            // true
+            // console.log(isNegative(0));               // false
+            // console.log(isNegative(6));               // false
+            // console.log(isNegative("10"));            // false
+            // console.log(isNegative(true));            // false
+            // console.log(isNegative(false));           // false
+            // console.log(isNegative("Bob"));           // false
+            // console.log(isNegative([-1, 2, 3]));      // false
+            // console.log(isNegative(null));            // false
+
+
+            /**
+            Define a function named isPositive that accepts an input and returns true or false based on whether the
+             input is above zero. Any non-numeric input should return false.
+
+            isPositive(1)               // true
+            isPositive("6")             // true
+            isPositive(3.141)           // true
+            isPositive(-1)              // false
+            isPositive(-5)              // false
+            isPositive("-4")            // false
+            isPositive(0)               // false
+            isPositive("Bob")           // false
+            isPositive(true)            // false
+            */
+
+            // function isPositive(input) {
+            //     if (input > 0) {
+            //         return true
+            //     } else if (isNaN(parseFloat((input)))){
+            //         return false
+            //     } else {
+            //         return false
+            //     }
+            // }
+            // console.log(isPositive(1));               // true
+            // console.log(isPositive("6"));             // true
+            // console.log(isPositive(3.141));           // true
+            // console.log(isPositive(-1));              // false
+            // console.log(isPositive(-5));              // false
+            // console.log(isPositive("-4"));            // false
+            // console.log(isPositive(0));               // false
+            // console.log(isPositive("Bob"));           // false
+            // console.log(isPositive(true));            // false
+
+
+            /**
+            Define a function named isZero that will return true when passed an argument of the numeric value 0,
+             and return false for all other arguments.
+
+            isZero(0)                 // true
+            isZero("0")               // true
+            isZero("Hello")           // false
+            isZero("Codeup")          // false
+            isZero("123")             // false
+            isZero(true)              // false
+            isZero([1, 2, 3])         // false
+            isZero(null)              // false
+            isZero()                  // false
+            */
+
+            // function isZero(value) {
+            //     return parseFloat(value) === 0;
+            // }
+            //
+            // console.log(isZero(0));                 // true
+            // console.log(isZero("0"));               // true
+            // console.log(isZero("Hello"));           // false
+            // console.log(isZero("Codeup"));          // false
+            // console.log(isZero("123"));             // false
+            // console.log(isZero(true));              // false
+            // console.log(isZero([1, 2, 3]));         // false
+            // console.log(isZero(null));              // false
+            // console.log(isZero());                  // false
+
+            /**
+            Define a function named isArray that takes in an input and returns a boolean whether or not that input
+             is an array or not.
+
+            isArray([])                 // true
+            isArray([1, 2, 3])          // true
+            isArray(['a', 'b'])         // true
+            isArray(false)              // false
+            isArray(12)                 // false
+            isArray("Bob")              // false
+            isArray({'some': 'object'}) // false
+            isArray(true)               // false
+            isArray()                   // false
+            */
+
+            function isArray (input) {
+                return Array.isArray(input);
+            }
+
+            console.log(isArray([]));                 // true
+            console.log(isArray([1, 2, 3]));          // true
+            console.log(isArray(['a', 'b']));         // true
+            console.log(isArray(false));              // false
+            console.log(isArray(12));                 // false
+            console.log(isArray("Bob"));              // false
+            console.log(isArray({'some': 'object'})); // false
+            console.log(isArray(true));               // false
+            console.log(isArray());                   // false
+
+
+            /**
+            Define a function named upperCase that takes in a single input. If the input is not a string,
+             return false. If the input is a non-numeric string, then return it with all the letters capitalized.
+
+            upperCase("Codeup")         // "CODEUP"
+            upperCase("javascript")     // "JAVASCRIPT"
+            uppercase("45")             // "45"
+            upperCase(23)               // false
+            upperCase(null)             // false
+            upperCase([1, 2, 3])        // false
+            upperCase(true)             // false
+            upperCase()                 // false
+             */
+
+            function upperCase(input) {
+                if (typeof input !== 'string'){
+                return false;
+            } else {
+                return input.toUpperCase();
+            }}
+
+
+
+        })();
+
+
+    </script>
+
+</body>
+</html>
