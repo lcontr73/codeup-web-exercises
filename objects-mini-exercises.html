@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        (function(){
+            /**
+            Create a few beverage objects and assign values to each object for the following properties:
+
+                - brandName
+                - type
+                - volumeInLiters
+                - priceInCents
+                - expirationDate
+                - datesOfPreviousSips (use an array of strings)
+            - isOpen
+
+            Define your objects using both literal syntax to create all properties and values at once and also try
+             defining empty objects and assign property values in separate statements using the dot notation.
+             */
+
+            var beverage1 = {
+                brandName: 'Orange Juice',
+                type: 'Juice',
+                volumeInLiters: '.3 liters',
+                priceInCents: '.75',
+                expirationDate: '1 May 2022',
+                datesOfPreviousSips: ['1 April 2022', '10 April 2022', '17 April 2022']
+            };
+
+            var beverage2 = {
+                brandName: 'Coke',
+                type: 'Soda',
+                volumeInLiters: '.4 liters',
+                priceInCents: '99',
+                expirationDate: '15 May 2022',
+                datesOfPreviousSips: ['3 April 2022', '9 April 2022', '15 April 2022']
+            }
+                var beverages = [beverage1, beverage2];
+                console.log(beverages)
+
+            var beverage1 = {};
+            beverage1.brandName = 'Orange Juice';
+            beverage1.type = 'Juice';
+            beverage1.volumeInLiters = '3 liters';
+            beverage1.priceInCents = '75';
+            beverage1.expirationDate = '1 May 2022';
+            beverage1.datesOfPreviousSips = ['1 April 2022', '10 April 2022', '17 April 2022'];
+
+            var beverage2 = {};
+            beverage2.brandName = 'Coke';
+            beverage2.type = 'Soda';
+            beverage2.volumeInLiters = '.4 liters';
+            beverage2.priceInCents = '99';
+            beverage2.expirationDate = '15 May 2022';
+            beverage2.datesOfPreviousSips = ['3 April 2022', '9 April 2022', '15 April 2022'];
+
+            var beverages = [beverage1, beverage2];
+            console.log(beverages)
+
+
+/**
+            -- Mini Exercise 2
+*/
+            var users = [
+                {
+                    givenName: 'Sam',
+                    age: 21
+                },
+                {
+                    givenName: 'Cathy',
+                    age: 34
+                },
+                {
+                    givenName: 'Karen',
+                    age: 43
+                }
+            ];
+
+
+
+
+            //1. Log the names of all users in a single console log separated by spaces. // output = "Sam Cathy Karen"
+            var output = '';
+            users.forEach(function(user){
+                output += user.givenName + " ";
+            });
+            console.log(output.trim());
+
+            //or//
+            var output = [];
+            users.forEach(function(user) {
+                output.push(user.givenName);
+            })
+            console.log(output.join(' '));
+
+
+            //2. Change the names of all users to "John Doe"
+            users.forEach(function(user){
+                user.givenName = 'John Doe';
+            })
+            console.log(users);
+
+
+            //3. Increase the current age of all users by 1
+           users.forEach(function(user) {
+               user.age +=1;
+           })
+
+            // or
+
+            for (var i = 0; i < users.length; i ++) {
+                users[i].age +=1;
+            }
+
+
+            //Can you accomplish each step using iteration?
+
+
+
+
+
+
+
+
+        })()
+
+    </script>
+</body>
+</html>
