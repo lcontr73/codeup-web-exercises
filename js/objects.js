@@ -49,11 +49,37 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron',
+            amount: 180
+        },
+        {name: 'Ryan',
+            amount: 250
+        },
+        {name: 'George',
+            amount: 320
+        }
+    ]
+
+    shoppers.forEach(function(shopper) {
+        var priceWithDiscount = (shopper.amount -(shopper.amount * .12)).toFixed(2)
+        var amountDiscount = (shopper.amount * .12).toFixed(2)
+
+        if (shopper.amount > 200) {
+            console.log(shopper.name + ' your original total is $' + shopper.amount + '. You will receive ' + '$' + (amountDiscount) + ' off your purchase. Your new total is $' + (priceWithDiscount));
+        } else
+            console.log(shopper.name + ' your original total is $' + shopper.amount + ' you do not qualify for a discount');
+    });
+
+
+    // shoppers.forEach(function(shopper) {
+    // if (shopper.amount > 200) {
+    //     console.log(shopper.name + ' your original total is $' + shopper.amount + '. You will receive ' + '$' + (shopper.amount * .12).toFixed(2) + ' off your purchase. Your new total is $' + (shopper.amount -(shopper.amount * .12)).toFixed(2));
+    // } else
+    //     console.log(shopper.name + ' your original total is $' + shopper.amount + ' you do not qualify for a discount');
+    // });
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
