@@ -11,12 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    // var person = {
-    //     firstName: 'Leonard',
-    //     lastName: 'Contreras',
-    // }
-    //     console.log(person.firstName) // "Rick"
-    //     console.log(person.lastName) // "Sanchez"
+    var person = {
+        firstName: 'Leonard',
+        lastName: 'Contreras',
+    }
+        console.log(person.firstName) // "Rick"
+        console.log(person.lastName) // "Sanchez"
 
     /**
      * TODO:
@@ -27,14 +27,14 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    var person = {
+    var person2 = {
         firstName: 'Leonard',
         lastName: 'Contreras',
         sayHello: function() {
             return ('Hello from ' + this.firstName + ' ' + this.lastName);
         }
     }
-    console.log(person.sayHello())
+    console.log(person2.sayHello())
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -93,7 +93,38 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+var books = [
+        {title: 'Harry Potter and the Sorcerer\'s Stone',
+            author: {firstName: 'J.K.',
+                    lastName: 'Rowling',}
+        },
+        {title: 'book2',
+            author: {firstName: 'bob',
+                lastName: 'barker',}
+        },
+        {title: 'To Infinity and Beyond',
+            author: {firstName: 'Buzz',
+                lastName: 'Lightyear',}
+        },
+        {title: 'A Brief History of Time',
+            author: {firstName: 'Stephen',
+                lastName: 'Hawking',}
+        },
+        {
+            title: 'The Salmon of Doubt',
+            author: {firstName: 'Douglas',
+                lastName: 'Adams',}
+        }
 
+    ]
+
+
+
+
+
+    console.log(books[0].title) //
+    console.log(books[0].author.firstName) //
+    console.log(books[0].author.lastName) //
     /**
      * TODO:
      * Loop through the books array and output the following information about
