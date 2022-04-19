@@ -145,7 +145,11 @@ var books = [
      *      ...
      */
 
-    books.forEach(function(book) {
+    books.forEach(function(book,index) {
+        console.log('Book # ' + (index + 1));
+        console.log('Title: ' + book.title);
+        console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName);
+        console.log('---');
         // var priceWithDiscount = (shopper.amount -(shopper.amount * .12)).toFixed(2)
         // var amountDiscount = (shopper.amount * .12).toFixed(2)
         //
