@@ -150,6 +150,17 @@ var books = [
      *      ...
      */
 
+    books.forEach(function(book) {
+        // var priceWithDiscount = (shopper.amount -(shopper.amount * .12)).toFixed(2)
+        // var amountDiscount = (shopper.amount * .12).toFixed(2)
+        //
+        // if (shopper.amount > 200) {
+        //     console.log(shopper.name + ' your original total is $' + shopper.amount + '. You will receive ' + '$' + (amountDiscount) + ' off your purchase. Your new total is $' + (priceWithDiscount));
+        // } else
+        //     console.log(shopper.name + ' your original total is $' + shopper.amount + ' you do not qualify for a discount');
+    });
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
