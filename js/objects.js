@@ -15,8 +15,8 @@
         firstName: 'Leonard',
         lastName: 'Contreras',
     }
-        console.log(person.firstName) // "Rick"
-        console.log(person.lastName) // "Sanchez"
+        // console.log(person.firstName) // "Rick"
+        // console.log(person.lastName) // "Sanchez"
 
     /**
      * TODO:
@@ -28,9 +28,9 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
   person.sayHello = function() {
-      return 'Hello from ' + person.firstName + " " + person.lastName
+      return 'Hello from ' + person.firstName + " " + person.lastName + '!';
   }
-    console.log(person.sayHello())
+    // console.log(person.sayHello())
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -46,15 +46,9 @@
      */
 
     var shoppers = [
-        {name: 'Cameron',
-            amount: 180
-        },
-        {name: 'Ryan',
-            amount: 250
-        },
-        {name: 'George',
-            amount: 320
-        }
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
     ]
 
     shoppers.forEach(function(shopper) {
@@ -91,24 +85,29 @@
      */
 var books = [
         {title: 'Harry Potter and the Sorcerer\'s Stone',
-            author: {firstName: 'J.K.',
-                    lastName: 'Rowling',}
+            author: {
+                firstName: 'J.K.',
+                lastName: 'Rowling',}
         },
         {title: 'book2',
-            author: {firstName: 'bob',
+            author: {
+                firstName: 'bob',
                 lastName: 'barker',}
         },
         {title: 'To Infinity and Beyond',
-            author: {firstName: 'Buzz',
+            author: {
+                firstName: 'Buzz',
                 lastName: 'Lightyear',}
         },
         {title: 'A Brief History of Time',
-            author: {firstName: 'Stephen',
+            author: {
+                firstName: 'Stephen',
                 lastName: 'Hawking',}
         },
         {
             title: 'The Salmon of Doubt',
-            author: {firstName: 'Douglas',
+            author: {
+                firstName: 'Douglas',
                 lastName: 'Adams',}
         }
 
