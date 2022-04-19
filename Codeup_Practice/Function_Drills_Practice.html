@@ -56,17 +56,78 @@
             function isMultipleOfThree(input) {
                 return input % 3 === 0;
             }
-            console.log(isMultipleOfThree(123));
-            console.log(isMultipleOfThree(80));
+            // console.log(isMultipleOfThree(123));
+            // console.log(isMultipleOfThree(80));
 //             Make a function named isMultipleOfThreeAndFive(input)
-
+            function isMultipleOfThreeAndFive(input) {
+                return input % 3 === 0 && input % 5 === 0;
+            }
+            // console.log(isMultipleOfThreeAndFive(3));
+            // console.log(isMultipleOfThreeAndFive(30));
 //             Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
+            function isMultipleOf(target, n) {
+                return target % n === 0;
+            }
+            // console.log(isMultipleOf(4, 3));
+            // console.log(isMultipleOf(30, 3));
 //             Make a function named isTrue(boolean)
+            function isTrue(boolean) {
+                return boolean === true;
+            }
+            // console.log(isTrue(true));
+            // console.log(isTrue('cat'));
 //             Make a function named isFalse(boolean)
+            function isFalse(boolean) {
+                return typeof boolean !== 'boolean';
+            }
+            // console.log(isFalse(false));
+            // console.log(isFalse('cat'));
 //             Make a function named isTruthy(input), remember that values other than true will behave like true
+//             function isTruthy(input) {
+//                 return input === true;
+//             }
+//             console.log(isTruthy(false));
+//             console.log(isTruthy(0));
+//             console.log(isTruthy(-0));
+//             console.log(isTruthy(''));
+//             console.log(isTruthy(null));
+//             console.log(isTruthy(undefined));
+//             console.log(isTruthy(NaN));
+//             console.log(isTruthy(true));
+
 //             Make a function named isFalsy(input), remember that values other than false behave like false
+//             function isFalsy(input) {
+//                 return !input
+//             }
+//             console.log(isFalsy(false));
+//             console.log(isFalsy(0));
+//             console.log(isFalsy(-0));
+//             console.log(isFalsy(''));
+//             console.log(isFalsy(null));
+//             console.log(isFalsy(undefined));
+//             console.log(isFalsy(NaN));
+//             console.log(isFalsy(true));
+
 //             Make a function named isVowel(letter)
+
+            function isVowel(letter) {
+                return 'aeiouAEIOU'.indexOf(letter.toLowerCase()) >= 0;
+            }
+
+            // console.log(isVowel('v'));
+            // console.log(isVowel('a'));
+            // console.log(isVowel('E'));
+            // console.log(isVowel('u'));
+            // console.log(isVowel('cat'));
 //             Make a function named isConsonant(letter)
+            function isConsonant(letter) {
+                return letter !== 'aeiou'.indexOf(letter.toLowerCase()) >= 0;
+            }
+            console.log(isConsonant('v'));
+            console.log(isConsonant('a'));
+            console.log(isConsonant('E'));
+            console.log(isConsonant('u'));
+            console.log(isConsonant('cat'));
 //             Make a function named isCapital(letter)
 //             Make a function named isLowerCase(letter)
 //             Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
