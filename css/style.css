@@ -17,6 +17,15 @@ body {
 }
 
 body {
-    background-image: url("../images/camping_sunset.png");
+    background-image: url("../images/sky.png");
     background-size: contain;
 }
+
+ul {
+    list-style-type: square;
+}
+
+body {
+    font-family: 'Lobster', cursive;
+}
+
