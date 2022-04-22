@@ -29,3 +29,24 @@ body {
     font-family: 'Lobster', cursive;
 }
 
+table td, table tr {
+    padding: 10px;
+    font-size: 20px;
+}
+
+a:link {
+    color: chartreuse;
+}
+
+
+a:visited {
+    color: darkred;
+}
+
+a:hover {
+    color: aquamarine;
+}
+
+a:active {
+    color:chartreuse;
+}
