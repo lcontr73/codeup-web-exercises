@@ -2,3 +2,21 @@
     color: purple; /* single line comment */
     text-decoration: underline;
 }
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: green;
+    text-decoration: underline;
+}
+
+body {
+    background-color: tan;
+}
+
+body {
+    background-image: url("../images/camping_sunset.png");
+    background-size: contain;
+}
