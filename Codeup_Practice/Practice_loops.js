@@ -133,10 +133,22 @@
 
     /**
     3. Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
-        Your output should look like this:
+        Your output should look like this:**/
 
+    console.log('Number to skip is: '+ pickANumber);
+    for (var i = 0; i <= 50; i++) {
 
-    Number to skip is: 27
+        if (i === pickANumber) {
+            console.log('Yikes! Skipping number: ' + pickANumber);
+            continue;
+
+        } if(i % 2 !== 0) {
+            console.log(i);
+        }
+    }
+
+    /**
+     Number to skip is: 27
 
     Here is an odd number: 1
     Here is an odd number: 3
@@ -167,6 +179,7 @@
 
 
 
+/**
      While Loops
     1. Create a file named while.js in the js directory.
 
