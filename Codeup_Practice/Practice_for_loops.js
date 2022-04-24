@@ -104,10 +104,14 @@
     15
     10
     5
+     **/
+
+    for (var i = 100; i > 0; i-=5)
+        console.log(i);
 
 
-
-     Break and Continue
+    /**
+    Break and Continue
     1. Create a file named break_and_continue.js in the js directory.
 
 
