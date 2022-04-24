@@ -43,9 +43,23 @@
     24 is even
     199 is odd
 ...
+     **/
 
 
-     4. Create a for loop that uses console.log to create the output shown below.
+    for (var i = 0; i < 10; i++) {
+        var random = Math.floor(Math.random()*(200-20+1)) + 20;
+        if (random % 2 === 0) {
+           console.log(random + ' is even.');
+    } else {
+            console.log(random + 'is odd.');
+        }
+    }
+
+
+
+
+    /**
+    4. Create a for loop that uses console.log to create the output shown below.
 
 
     1
