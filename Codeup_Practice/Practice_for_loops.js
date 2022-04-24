@@ -61,7 +61,6 @@
     /**
     4. Create a for loop that uses console.log to create the output shown below.
 
-
     1
     22
     333
@@ -71,9 +70,18 @@
     7777777
     88888888
     999999999
+     **/
 
+    function showDigitsMultipleTimes(max) {
+    for (var i = 1; i <= max; i++) {
+        var string = i.toString().repeat(i) //converts to string then copys the string using report method
+        console.log(string)
+    }
+}
+    showDigitsMultipleTimes(9)
 
-     5. Create a for loop that uses console.log to create the output shown below.
+    /**
+    5. Create a for loop that uses console.log to create the output shown below.
 
 
     100
