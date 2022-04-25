@@ -1,5 +1,5 @@
 .fancy-header {
-    color: purple; /* single line comment */
+    color: purple;
     text-decoration: underline;
 }
 
@@ -14,19 +14,13 @@ h2 {
 
 body {
     background-color: tan;
-}
-
-body {
     background-image: url("../images/sky.png");
     background-size: contain;
+    font-family: 'Lobster', cursive;
 }
 
 ul {
     list-style-type: square;
-}
-
-body {
-    font-family: 'Lobster', cursive;
 }
 
 table td, table tr {
