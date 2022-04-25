@@ -1,3 +1,16 @@
+:root {
+    --bg-info: hsl(220deg 100% 90%);
+    --text-info: hsl(247deg 67% 32%);
+    --bg-success: hsl(138deg 60% 88%);
+    --text-success: hsl(145deg 100% 19%);
+    --bg-warning: hsl(59deg 89% 89%);
+    --text-warning: hsl(50deg 100% 25%);
+    --bg-error: hsl(354deg 80% 90%);
+    --text-error: hsl(344deg 90% 25%);
+
+}
+
+
 body, html {
     height: 100%;
     width: 100%;
@@ -7,31 +20,31 @@ body, html {
 }
 
 .message-info {
-    background-color: hsl(220deg 100% 90%);
-    color: hsl(247deg 67% 32%);
+    background-color: var(--bg-info);)
+    color: var(--text-info);)
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
 }
 .message-success {
-    background-color: hsl(138deg 60% 88%);
-    color: hsl(145deg 100% 19%);
+    background-color: var(--bg-success);
+    color: var(--text-success);
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
 }
 
 .message-warning {
-    background-color: hsl(59deg 89% 89%);
-    color: hsl(50deg 100% 25%);
+    background-color: var(--bg-warning);
+    color: var(--text-warning);
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
 }
 
 .message-error {
-    background-color: hsl(354deg 80% 90%);
-    color: hsl(344deg 90% 25%);
+    background-color: var(--bg-error);
+    color: var(--text-error);
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
