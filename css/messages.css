@@ -8,12 +8,14 @@ body, html {
 
 .message-info {
     background-color: hsl(220deg 100% 90%);
+    color: hsl(247deg 67% 32%);
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
 }
 .message-success {
     background-color: hsl(138deg 60% 88%);
+    color: hsl(145deg 100% 19%);
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
@@ -21,6 +23,7 @@ body, html {
 
 .message-warning {
     background-color: hsl(59deg 89% 89%);
+    color: hsl(50deg 100% 25%);
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
@@ -28,6 +31,7 @@ body, html {
 
 .message-error {
     background-color: hsl(354deg 80% 90%);
+    color: hsl(344deg 90% 25%);
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
