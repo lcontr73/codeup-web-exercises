@@ -49,44 +49,28 @@ doubleNumber(2, 65536);
     'The below code shows how to get the random numbers for this exercise.
  */
 
+    var allCones = Math.floor(Math.random() * 50) + 50;
+    console.log('Cones to Sale: ' + allCones)
 
-// function generateRandomSales(){
-//     return Math.floor(Math.random() *5) +1;
-//     }
+    function coneSales(totalCones) {
 
-// The output should be similar to the following
-//  function calculateConeSales(totalCones){
-//     do {
-//     var totalToSell = Math.floor(Math.random() *5) +1;
-//
-//     var actualSoldAmount = (totalCones >= totalToSell) ? totalToSell : totalCones;
-//
-//         if(totalCones >= totalToSell) {
-//             //     actualSoldAmount = totalToSell;
-//             // } else {
-//             //     actualSoldAmount = totalCones
-//             //
-//
-//             if(totalToSell === actualSoldAmount) {
-//                 console.log(actualSoldAmount + " cones sold...  ")
-//             } else {
-//                 console.log("Cannot sell you " + totalToSell + " cones I only have "+ actualSoldAmount + "...")
-//             }
-//
-//             // console.log(
-//             //     (actualSoldAmount === totalToSell) ?
-//             //     actualSold + ' cones sold...' :
-//             //     "Cannot sell you " + totalToSell + " cones I only have "+ actualSoldAmount +"..."
-//             // );
-//
-//             totalCones -= actualSoldAmount;
-//
-//         } while (totalCones > 0);
-//
-//         console.log("Yay! I sold them all!")
-//
-//     }}
-//
-//         calculateConeSales(allCones);
+        do {
+            var amountRequested = Math.floor(Math.random() * 5) + 1;
+
+
+            if (amountRequested < totalCones) {
+                console.log(amountRequested + ' cones sold...' + 'There is ' + (totalCones - amountRequested) + ' left');
+
+            } else if (amountRequested > totalCones) {
+                console.log('Cannot sell you ' + amountRequested + ' cones I only have ' + totalCones + ' cones left...');
+            } else if (amountRequested === totalCones) {
+                console.log('Amount Sold: ' + amountRequested + ' Yay! I sold them all!');
+            }
+            totalCones = totalCones - amountRequested
+        } while (totalCones > 0);
+    }
+
+    return (coneSales(allCones));
+
 
 })();
