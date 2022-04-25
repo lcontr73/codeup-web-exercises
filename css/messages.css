@@ -7,7 +7,6 @@
     --text-warning: hsl(50deg 100% 25%);
     --bg-error: hsl(354deg 80% 90%);
     --text-error: hsl(344deg 90% 25%);
-
 }
 
 
@@ -26,6 +25,7 @@ body, html {
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
+    border-color: lightgrey;
 }
 .message-success {
     background-color: var(--bg-success);
@@ -33,6 +33,7 @@ body, html {
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
+    border-color: lightgrey;
 }
 
 .message-warning {
@@ -41,6 +42,7 @@ body, html {
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
+    border-color: lightgrey;
 }
 
 .message-error {
@@ -49,4 +51,5 @@ body, html {
     margin: 5px;
     padding: 8px;
     border-radius: 5px;
+    border-color: lightgrey;
 }
