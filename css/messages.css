@@ -1,0 +1,34 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.message-info {
+    background-color: hsl(220deg 100% 90%);
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+.message-success {
+    background-color: hsl(138deg 60% 88%);
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.message-warning {
+    background-color: hsl(59deg 89% 89%);
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.message-error {
+    background-color: hsl(354deg 80% 90%);
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
