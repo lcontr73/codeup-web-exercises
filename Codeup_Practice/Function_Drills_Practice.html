@@ -121,7 +121,8 @@
             // console.log(isVowel('cat'));
 //             Make a function named isConsonant(letter)
             function isConsonant(letter) {
-                return letter !== 'aeiou'.indexOf(letter.toLowerCase()) >= 0;
+
+                return letter.toLowerCase() !== isVowel(letter)
             }
             console.log(isConsonant('v'));
             console.log(isConsonant('a'));
@@ -129,8 +130,17 @@
             console.log(isConsonant('u'));
             console.log(isConsonant('cat'));
 //             Make a function named isCapital(letter)
+            function isCapital(letter) {
+                return letter.toUpperCase();
+            }
+            console.log(isCapital('a'));
 //             Make a function named isLowerCase(letter)
+            function isLowerCase(letter) {
+                return letter.toLowerCase();
+            }
+            console.log(isLowerCase('T'));
 //             Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
+
 //             Make a function named isSpace(letter) that returns if a character is a space character
 //             Make a function named isZero(number)
 //             Make a function named notZero(input) that returns true if the input is not zero
