@@ -79,10 +79,10 @@ for (var i = 0; i < names.length; i += 1) {
     myPickLast(numbersList);
 
 
-    console.log(myPick1([1,2,3,4,5]),1); //returns 1
-    console.log(myPick1([1,2,3,4,5]),2); //returns 1
-    console.log(myPick1([1,2,3,4,5]),myPickLast(numbersList) ); //returns 1
-    // console.log(myPick1([1,2,3,4,5]),1); //returns 1
+    console.log(myPick1(numbersList));
+    console.log(myPick2(numbersList));
+    console.log(myPickLast(numbersList));
+
 
     // function numbersLog1(numbersList) {
     //     for (var i = 0; i < numbersList.length; i +=1) {
