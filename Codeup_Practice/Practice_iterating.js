@@ -52,18 +52,38 @@ names.forEach(function(name) {
      */
 var numbers = [1,2,3,4,5];
 
-function first(number) {
-    console.log(numbers[0]);
+function first(numbers) {
+    for (var i = 0; i < numbers.length; i += 1) {
+        console.log(numbers[0])
+    }
 }
-    first(numbers)
+first(numbers);
 
-function second(number) {
-    console.log(numbers[1]);
+function second(numbers) {
+    for(var i = 0; i < numbers.length; i+=1) {
+        console.log(numbers[1])
+    }
 }
-    second(numbers)
+second(numbers)
 
-function last(number) {
-    console.log(numbers[numbers.length - 1]);
+function last(numbers) {
+    for (var i = 0; i < numbers.length; i += 1) {
+        console.log(numbers[numbers.length - 1]);
+    }
 }
-    last(numbers);
+last(numbers);
+// function first(number) {
+//     console.log(numbers[0]);
+// }
+//     first(numbers)
+//
+// function second(number) {
+//     console.log(numbers[1]);
+// }
+//     second(numbers)
+//
+// function last(number) {
+//     console.log(numbers[numbers.length - 1]);
+// }
+//     last(numbers);
 })();
