@@ -108,6 +108,26 @@
 
     console.log(unpavedTotalDistance(trails));
 
+
+
+    // Write a javascript function that takes in a string, and returns the string in alphabetical order. EX: 'webmaster' -> 'abeemrstw' 'developer' -> deeeloprv
+function alphaOrder(input) {
+    return input.split('').sort().join('');
+}
+console.log(alphaOrder('webmaster'));
+console.log(alphaOrder('developer'));
+
+//instructor solution
+    function alphabetize(str) {
+        let strArray = str.split('');
+        let alphabeticalOrder = strArray.sort();
+        let result = alphabeticalOrder.join('');
+        return result;
+
+    }
+    console.log(alphabetize('webmaster'));
+    console.log(alphabetize('developer'));
+
 </script>
 </body>
 </html>
