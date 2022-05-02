@@ -140,9 +140,24 @@
             }
             console.log(isLowerCase('T'));
 //             Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
+            function hasLowerCase(input) {
+                if (input.toUpperCase() === input) {
+                    return input + ' is uppercase.'
+                } else {
+                    return input + ' has some lowercase letters.'
+                }
+            }
+
+            console.log(hasLowerCase('Dog'));
+            console.log(hasLowerCase('cat'));
+            console.log(hasLowerCase('RUN'));
 
 //             Make a function named isSpace(letter) that returns if a character is a space character
+
 //             Make a function named isZero(number)
+            function isZero(number) {
+                return number === 0
+            }
 //             Make a function named notZero(input) that returns true if the input is not zero
 //             Write a function named lowerCase(string)
 //             Write a function named double(n) that returns a number times two
