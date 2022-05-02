@@ -1,0 +1,11 @@
+.jumbotron {
+    height: 346px;
+    background-size: cover;
+}
+
+sup {
+    top: -.5em;
+    position: 0;
+    font-size: 75%;
+    right: -.5px
+}
