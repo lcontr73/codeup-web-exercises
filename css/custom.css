@@ -1,11 +1,16 @@
 .jumbotron {
     height: 346px;
     background-size: cover;
+    background-image: url('/images/pizza.png');
+    width: 80%;
 }
 
-sup {
-    top: -.5em;
-    position: 0;
-    font-size: 75%;
-    right: -.5px
+.nav {
+    width: 80%;
+    margin: auto;
+}
+
+.nav-move{
+    width: 100%;
+    margin: auto;
 }
