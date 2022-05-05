@@ -228,22 +228,65 @@
         ];
 
 
-    // Create the following functions that take in an array of product objects and return various values:
+        // Create the following functions that take in an array of product objects and return various values:
 
-    //     returnMostExpensiveProductObjectInStock(products)
-    // returnLeastExpensiveProductObjectInStock(products)
-    // returnAveragePriceOfAllProductsInStock(products)
-    // returnProductObjectsNotInStock(products)
+        //     returnMostExpensiveProductObjectInStock(products)
+        let mostExpensive = 0
+        let expName
 
+        products.forEach(function (product) {
+            if (product.priceInCents > mostExpensive && product.isInStock === true) {
+                mostExpensive = product.priceInCents
+                expName = product.name
+            }
+        });
+        console.log(expName)
 
-    products.forEach(function(product) {
-        // console.log(product.priceInCents)
-   const pricesString = product.priceInCents
-       const pricesArray = pricesString.split(',');
-   console.log(pricesArray);
-    })
+        // returnLeastExpensiveProductObjectInStock(products)
+        let leastExpensive = mostExpensive
+        let leastName
 
+        products.forEach(function (product) {
+            if (product.priceInCents < leastExpensive && product.isInStock === true) {
+                leastExpensive = product.priceInCents
+                leastName = product.name
+            }
+        });
+        console.log(leastName)
 
+        // returnAveragePriceOfAllProductsInStock(products)
+
+        var sum = 0
+        var avg
+        var count = 0
+
+        products.forEach(function (product) {
+                if (product.isInStock === true) {
+                    sum += product.priceInCents;
+                    count++;
+
+                }
+                avg = sum / count
+                return avg
+            }
+        )
+        console.log(avg)
+        // function AveragePriceOfAllProductsInStock(products) {
+        //     var sum = 0
+        //     var count = 0;
+        //
+        //
+        //     for (let i = 0; i < products.length; i++) {
+        //         if (products[i].isInStock === true) {
+        //             sum += products[i].priceInCents;
+        //             count++;
+        //         }
+        //     }
+        //     var avg = sum/count
+        //     return avg
+        // }
+        //
+        // console.log(AveragePriceOfAllProductsInStock(products))
 
 
     })();
