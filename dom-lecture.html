@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object Model</title>
+</head>
+
+<style>
+    .even {
+        background-color: #7cb342;
+    }
+
+    .odd {
+        background-color: #2b7644;
+    }
+
+    div {
+        padding-bottom: 20px;
+    }
+</style>
+
+<body>
+
+<header>
+    <h1>I am a Header, I'm probably important</h1>
+</header>
+
+<main>
+
+    <a href="#" id="pageLink">Link to nowhere</a>
+
+    <ul id="list">
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+        <li class="list-item">Item 3</li>
+        <li class="list-item">Item 4</li>
+        <li class="list-item">Item 5</li>
+    </ul>
+
+    <table id="mainTable">
+
+        <thead>
+        <tr>
+            <th>First one</th>
+            <th>Second One</th>
+            <th>Third One</th>
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr data-id="4">
+            <td>Adding content</td>
+            <td>Adding content</td>
+            <td>Adding content</td>
+        </tr>
+        <tr data-id="1">
+            <td>Adding content</td>
+            <td>Adding content</td>
+            <td>Adding content</td>
+        </tr>
+        <tr data-id="3">
+            <td>Adding content</td>
+            <td>Adding content</td>
+            <td>Adding content</td>
+        </tr>
+
+        <tr data-id="2">
+            <td>Adding content</td>
+            <td>Adding content</td>
+            <td>Adding content</td>
+        </tr>
+        <tr data-id="5">
+            <td>Adding content</td>
+            <td>Adding content</td>
+            <td>Adding content</td>
+        </tr>
+
+        </tbody>
+
+    </table>
+
+    <div>
+        <form name="mainForm">
+            <div>
+                <label for="userText">Enter Text:</label>
+                <input type="text" name="userText" id="userText" value="Default Text">
+            </div>
+            Entered Text:
+            <div id="displayText">
+                ??????
+            </div>
+        </form>
+    </div>
+
+
+</main>
+
+<footer>
+
+</footer>
+
+<script>
+
+    // TODO: Document Object Model
+    // Common Ways to Grab An Element
+    // A number of ways that we can actually grab elements using different methods
+
+    // Get any HTML element by ID
+    var byId = document.getElementById("list");
+    console.log("byId:", byId)
+
+    //Gets based on the HTML Tag Name, example would be like p tag or div
+    var byTagName = document.getElementsByTagName("li"); // HTML Collection similar to how we handle arrays
+    console.log("byTagName :", byTagName);
+    console.log("byTagName[0]:", byTagName[0]) //array syntax
+
+    var byClassName = document.getElementsByClassName("list-item")
+    console.log("byClassName:", byClassName)
+
+    // Query selectors expect it in CSS style syntax .class  or #id
+    var cssQuerySelectors = document.querySelector(".list-item");
+    console.log("cssQuerySelectors:", cssQuerySelectors)
+    var cssQuerySelectorAll = document.querySelectorAll(".list-item");
+
+    console.log("cssQuerySelectorAll :", cssQuerySelectorAll);
+
+    // Changing Things
+
+    // innerHTML/innerText
+    // TODO: change the content inside of the header.
+    var headerTag = document.getElementsByTagName("h1");
+    headerTag = headerTag[0];
+    // selects H1 tag from the page
+
+    setTimeout(function () {
+        // headerTag.innerText = "<span>I am a header now!</span>";
+        headerTag.innerHTML = "<span>I am a header now!</span>";
+    }, 3000)
+
+    // TODO: Inject HTML into the footer so its "cool".
+    // grabbing the first element in the array from footer tag elements
+    var footerTag = document.getElementsByTagName("footer")[0];
+    footerTag.innerHTML = "<p>Yeah I'm a cool footer now!</p><hr>";
+    // use of innerHTML will override all the existing elements in that container.
+
+
+    // Attributes get/set/has
+
+    var pageLink = document.querySelector("#pageLink");
+
+    // grab the value of the attribute from the element.
+
+    console.log("has href", pageLink.hasAttribute("href"));
+
+    if (pageLink.hasAttribute("href")) {
+        console.log('href', pageLink.getAttribute("href"));
+        pageLink.setAttribute("href", "https://www.google.com")
+        pageLink.innerText = "Google"
+    }
+    // TODO: Fix the link so that it goes to google.com use the dom! Change the link name
+
+    // Styles?
+
+    pageLink.style.backgroundColor = "grey";
+    pageLink.style.fontSize = "20px";
+
+
+    // TODO: Changing Styles Color every other list item red
+    // selecting all the class list-item elements on the page,
+    var listItems = document.querySelectorAll(".list-item");
+
+    console.log("listItems:", listItems)
+
+    // looping over the list items in the array
+    for (var i = 0; i < listItems.length; i++) {
+        console.log("listItems[i]:", listItems[i])
+        if (i % 2 === 1) listItems[i].style.backgroundColor = "red";
+    }
+
+    // TODO: Change the style of the footer.
+    footerTag.style.border = "10px solid yellow"
+
+    // TODO: apply the class even and odd to the table rows based on the data-id
+
+
+    // Adding another table row
+    var table = document.querySelector("#mainTable tbody");
+
+    table.innerHTML = table.innerHTML + "<tr data-id=\"6\">\n" +
+        "            <td>Adding content</td>\n" +
+        "            <td>Adding content</td>\n" +
+        "            <td>Adding content</td>\n" +
+        "        </tr>"
+
+
+    var tableRows = document.querySelectorAll("#mainTable tr");
+
+
+
+    // Adding even and odd classes to each row based on the data-id
+    console.log("tableRows:", tableRows)
+    for (var i = 0; i < tableRows.length; i++) {
+        var dataIds = tableRows[i].getAttribute("data-id");
+        console.log(dataIds);
+
+        if (dataIds % 2 === 0) {
+            tableRows[i].setAttribute("class", "even");
+        } else {
+            tableRows[i].setAttribute("class", "odd");
+        }
+    }
+
+
+    // Forms
+    // TODO: Get Values from a form input and put those in the displayText? Can we sync changes?
+    console.log("userText.value", document.forms.mainForm.userText.value)
+    var displayText = document.querySelector("#displayText")
+
+    // taking the text inside of the display text element and assigning its value to the
+    // inputs current value.
+
+    // THIS IS not a great way to do this!
+    setInterval(function () {
+        displayText.innerHTML = document.forms.mainForm.userText.value
+    },50)
+
+
+</script>
+
+</body>
+</html>
