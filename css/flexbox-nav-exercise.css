@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    background-color: #C1C1C1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+
+
+}
+
+
+.Logo {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+}
+
