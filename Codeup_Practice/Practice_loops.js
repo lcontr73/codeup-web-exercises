@@ -1,52 +1,53 @@
-(function(){
+(function () {
     "use strict";
     /**
-    For Loops
-    1. Create a file named for_loops.js inside the js directory and link it to your loops.html file.
+     For Loops
+     1. Create a file named for_loops.js inside the js directory and link it to your loops.html file.
 
      2. Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
 
-    For example, showMultiplicationTable(7) should output
-
-
-    7 x 1 = 7
-    7 x 2 = 14
-    7 x 3 = 21
-    7 x 4 = 28
-    7 x 5 = 35
-    7 x 6 = 42
-    7 x 7 = 49
-    7 x 8 = 56
-    7 x 9 = 63
-    7 x 10 = 70
+     For example, showMultiplicationTable(7) should output
+     **/
+    /**
+     7 x 1 = 7
+     7 x 2 = 14
+     7 x 3 = 21
+     7 x 4 = 28
+     7 x 5 = 35
+     7 x 6 = 42
+     7 x 7 = 49
+     7 x 8 = 56
+     7 x 9 = 63
+     7 x 10 = 70
      **/
 
-    function showMultiplicationTable(num) {
+    /**
+     function showMultiplicationTable(num) {
         for (var i = 0; i <= 10; i++) {
         console.log(num + 'x' + i + '=' + num * i);
     }
 
     }
-  // showMultiplicationTable(7);
-  showMultiplicationTable(4);
-  // showMultiplicationTable(2);
-  // showMultiplicationTable(9);
-  // showMultiplicationTable(14);
+     showMultiplicationTable(7);
+     showMultiplicationTable(4);
+     showMultiplicationTable(2);
+     showMultiplicationTable(9);
+     showMultiplicationTable(14);
+     **/
 
 
     /**
      3. Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200 and output to the console whether each number is odd or even. For example:
 
 
-        123 is odd
-    80 is even
-    24 is even
-    199 is odd
-...
-     **/
+     123 is odd
+     80 is even
+     24 is even
+     199 is odd
+     ...
 
 
-    for (var i = 0; i < 10; i++) {
+     for (var i = 0; i < 10; i++) {
         var random = Math.floor(Math.random()*(200-20+1)) + 20;
         if (random % 2 === 0) {
            console.log(random + ' is even.');
@@ -58,32 +59,33 @@
 
 
 
-    /**
-    4. Create a for loop that uses console.log to create the output shown below.
+     /**
+         4. Create a for loop that uses console.log to create the output shown below.
 
-    1
-    22
-    333
-    4444
-    55555
-    666666
-    7777777
-    88888888
-    999999999
-     **/
+         1
+         22
+         333
+         4444
+         55555
+         666666
+         7777777
+         88888888
+         999999999
+          **/
 
-    function showDigitsMultipleTimes(max) {
-    for (var i = 1; i <= max; i++) {
-        var string = i.toString().repeat(i) //converts to string then copys the string using report method
-        console.log(string)
-    }
-}
-    showDigitsMultipleTimes(9)
+    // for (var i = 0; i < 10; i++) {
+    //     var string = i.toString().repeat(i)
+    //     console.log(string)
+    // }
+
 
     /**
     5. Create a for loop that uses console.log to create the output shown below.
-
-
+     **/
+    // for (var i = 100; i > 0; i-=5) {
+    //     console.log(i)
+    // }
+/**
     100
     95
     90
@@ -106,21 +108,13 @@
     5
      **/
 
-    for (var i = 100; i > 0; i-=5)
-        console.log(i);
-
-
     /**
     Break and Continue
     1. Create a file named break_and_continue.js in the js directory.
      **/
 
-
     /**
     2. Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
-     **/
-
-
 
     while (true) {
         var pickANumber = parseFloat(prompt('Pick a number between 1 and 50'));
@@ -130,22 +124,22 @@
             alert('Please try again.')
         }
     }
-
-    /**
+     /**
     3. Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
-        Your output should look like this:**/
+        Your output should look like this:
+     **/
 
-    console.log('Number to skip is: '+ pickANumber);
-    for (var i = 0; i <= 50; i++) {
-
-        if (i === pickANumber) {
-            console.log('Yikes! Skipping number: ' + pickANumber);
-            continue;
-
-        } if(i % 2 !== 0) {
-            console.log(i);
-        }
-    }
+    // console.log('Number to skip is: '+ pickANumber);
+    // for (var i = 0; i <= 50; i++) {
+    //
+    //     if (i === pickANumber) {
+    //         console.log('Yikes! Skipping number: ' + pickANumber);
+    //         continue;
+    //
+    //     } if(i % 2 !== 0) {
+    //         console.log(i);
+    //     }
+    // }
 
     /**
      Number to skip is: 27
@@ -186,77 +180,83 @@
 
      2. Create a while loop that uses console.log() to create the output shown below.**/
 
-    function doubleNumber(start, max) {
-        while (start <= max) {
-            console.log(start);
-            start = start * 2;
-        }
-    }
-doubleNumber(2,65536)
-    /**
-    2
-    4
-    8
-    16
-    32
-    64
-    128
-    256
-    512
-    1024
-    2048
-    4096
-    8192
-    16384
-    32768
-    65536
-
-
-
-     Do While Loop
-    1. An ice cream seller can't go home until she sells all of her cones. First write enough code that generates a random number between 50 and 100 representing the amount of cones to sell before you start your loop. Inside of the loop your code should generate another random number between 1 and 5, simulating the amount of cones being bought by her clients. Use a do-while loop to log to the console the amount of cones sold to each person. The below code shows how to get the random numbers for this exercise.**/
-
-    var allCones = Math.floor(Math.random() * 50) + 50;
-    console.log('Cones to Sale: ' + allCones)
-
-    function coneSales(totalCones) {
-
-        do {
-            var amountRequested = Math.floor(Math.random() * 5) + 1;
-
-
-        if (amountRequested < totalCones) {
-            console.log(amountRequested + ' cones sold...' + 'There is ' + (totalCones - amountRequested) + ' left');
-
-        } else if (amountRequested > totalCones) {
-            console.log('Cannot sell you ' + amountRequested + ' cones I only have ' + totalCones + ' cones left...');
-        } else if (amountRequested === totalCones) {
-            console.log('Amount Sold: ' + amountRequested + ' Yay! I sold them all!');
-        }
-        totalCones = totalCones - amountRequested
-    } while (totalCones > 0);
-}
-
-    return (coneSales(allCones));
-
-    /**
-// This is how you get a random number between 50 and 100
-    var allCones = Math.floor(Math.random() * 50) + 50;
-// This expression will generate a random number between 1 and 5
-    Math.floor(Math.random() * 5) + 1;
-
-
-     The output should be similar to the following:
-
-        5 cones sold...  // if there are enough cones
-    Cannot sell you 6 cones I only have 3...  // If there are not enough cones
-    Yay! I sold them all! // If there are no more cones
-
-
-     1. Finally, commit the changes to your git repository, and push to GitHub.
-     **/
-
-
+    // function doubleNumber(start, max) {
+    //     while (start <= max) {
+    //         console.log(start)
+    //         start = start*2
+    //     }
+    // }
+    // doubleNumber(2, 65536)
+//
+//     function doubleNumber(start, max) {
+//         while (start <= max) {
+//             console.log(start);
+//             start = start * 2;
+//         }
+//     }
+// doubleNumber(2,65536)
+//     /**
+//     2
+//     4
+//     8
+//     16
+//     32
+//     64
+//     128
+//     256
+//     512
+//     1024
+//     2048
+//     4096
+//     8192
+//     16384
+//     32768
+//     65536
+//
+//
+//
+//      Do While Loop
+//     1. An ice cream seller can't go home until she sells all of her cones. First write enough code that generates a random number between 50 and 100 representing the amount of cones to sell before you start your loop. Inside of the loop your code should generate another random number between 1 and 5, simulating the amount of cones being bought by her clients. Use a do-while loop to log to the console the amount of cones sold to each person. The below code shows how to get the random numbers for this exercise.**/
+//
+//     var allCones = Math.floor(Math.random() * 50) + 50;
+//     console.log('Cones to Sale: ' + allCones)
+//
+//     function coneSales(totalCones) {
+//
+//         do {
+//             var amountRequested = Math.floor(Math.random() * 5) + 1;
+//
+//
+//         if (amountRequested < totalCones) {
+//             console.log(amountRequested + ' cones sold...' + 'There is ' + (totalCones - amountRequested) + ' left');
+//
+//         } else if (amountRequested > totalCones) {
+//             console.log('Cannot sell you ' + amountRequested + ' cones I only have ' + totalCones + ' cones left...');
+//         } else if (amountRequested === totalCones) {
+//             console.log('Amount Sold: ' + amountRequested + ' Yay! I sold them all!');
+//         }
+//         totalCones = totalCones - amountRequested
+//     } while (totalCones > 0);
+// }
+//
+//     return (coneSales(allCones));
+//
+//     /**
+// // This is how you get a random number between 50 and 100
+//     var allCones = Math.floor(Math.random() * 50) + 50;
+// // This expression will generate a random number between 1 and 5
+//     Math.floor(Math.random() * 5) + 1;
+//
+//
+//      The output should be similar to the following:
+//
+//         5 cones sold...  // if there are enough cones
+//     Cannot sell you 6 cones I only have 3...  // If there are not enough cones
+//     Yay! I sold them all! // If there are no more cones
+//
+//
+//      1. Finally, commit the changes to your git repository, and push to GitHub.
+//      **/
 
 
 })();

@@ -15,8 +15,7 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
-<button id="list-ever-other-bttn">Change every other item</button>
-<button id="change-to-blue-bttn">Change to Blue</button>
+<button id="change-color-bttn">Change color</button>
 
 
 <h2 id="sub-header">Hello Again.</h2>
@@ -87,26 +86,19 @@
         }
         document.getElementById('sub-header-bttn').addEventListener('click', subHeaderEvent)
 
-        //button to Set text color on every other list item to grey
-        var everOtherButton = function (event) {
+        //button to Set text color on every other list item to grey  button to Set text color of li with dbid = 1 to blue
+        var changeColor = function (event) {
             for (var i = 0; i < listItems.length; i++) {
+
                 if (i % 2 === 1) {
                     listItems[i].style.color = "grey";
                 }
+                if (listItems[i].getAttribute('data-dbid') === "1")
+                    listItems[i].style.color = 'blue';
             }
         }
-        document.getElementById('list-ever-other-bttn').addEventListener('click', everOtherButton)
-
-
-        //button to Set text color of li with dbid = 1 to blue
-        var changeToBlueButton = function (event) {
-            for (var i = 0; i < listItems.length; i++) {
-                var dbId = listItems[i].getAttribute('data-dbid');
-                if(dbId === "1")
-                    listItems[i].style.color = 'blue';
-                }
-            }
-        document.getElementById('change-to-blue-bttn').addEventListener('click', changeToBlueButton)
+        document.getElementById('change-color-bttn').addEventListener('click', changeColor)
+        document.getElementById('change-color-bttn').addEventListener('click', changeColor)
 
         //button to Change the text in the first sub paragraph to "Mission Accomplished!"
         var subParagraphEvent = function (event) {

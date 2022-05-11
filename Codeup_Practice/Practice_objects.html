@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var users = [
+        {
+            givenName: 'Sam',
+            age: 21
+        },
+        {
+            givenName: 'Cathy',
+            age: 34
+        },
+        {
+            givenName: 'Karen',
+            age: 43
+        }
+    ];
+
+    // 1. Log the names of all users in a single console log separated by spaces. // output = "Sam Cathy Karen"
+
+    var output = ''
+    users.forEach(function (user) {
+        output += user.givenName + ' ';
+    });
+    console.log(output.trim());
+
+
+    // 2. Change the names of all users to 'John Doe'
+
+    users.forEach(function (user) {
+        user.givenName = 'John Doe';
+    })
+    console.log(users)
+
+    //3. Increase the current age of all users by 1
+
+    users.forEach(function (user) {
+        user.age += 1;
+    })
+
+    // This will just pull the user ages from the object and console log just the ages
+    console.log(users)
+     users.forEach(function (user) {
+         console.log(user.age);
+     });
+
+
+    // log the total of all the ages
+
+
+
+
+</script>
+</body>
+</html>
