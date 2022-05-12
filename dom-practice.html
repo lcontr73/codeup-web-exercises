@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="color"/>
+<button type="button" id="changeColor">Change Color</button>
+<script>
+    "use strict";
+    var button = document.getElementById('changeColor');
+    var color = document.querySelector('#color');
+    var body = document.querySelector('body');
+
+    function changeColor(e) {
+        //new bg color
+        body.style.backgroundColor = color.value;
+    }
+    button.addEventListener('click', changeColor)
+</script>
+
+
+</body>
+</html>
