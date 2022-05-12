@@ -190,4 +190,28 @@ Here is an odd number: 49
     // }
 
 
+        // For Loop
+var pies = [
+    "apple",
+    "tasty cherry",
+    "tasty key lime",
+    "huckleberry",
+    "rhubarb"
+];
+
+function getTastyPies(pies) {
+    var tastyPies = [];
+    pies.forEach(function(pie) {
+        if (pie.startsWith("tasty")) {
+            tastyPies.push(pie);
+        }
+    });
+    return tastyPies;
+}
+
+console.log(getTastyPies(pies));
+console.log(pies);
+
+
+
 })();
