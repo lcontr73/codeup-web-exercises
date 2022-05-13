@@ -8,7 +8,9 @@
 
 <input type="text" id="color"/>
 <button type="button" id="changeColor">Change Color</button>
+<p id="doubleSize">Hello World</p>
 <script>
+    (function(){
     "use strict";
     var button = document.getElementById('changeColor');
     var color = document.querySelector('#color');
@@ -19,6 +21,20 @@
         body.style.backgroundColor = color.value;
     }
     button.addEventListener('click', changeColor)
+
+
+
+    var paragraph = document.querySelector("#doubleSize");
+    console.log(paragraph);
+
+
+    paragraph.addEventListener('dblclick', function(event){
+        event.target.style.fontSize = '12px';
+        var fontSize = parseFloat(event.target.style.fontSize);
+        event.target.style.fontSize = fontSize *2 + 'px';
+    })
+
+    })()
 </script>
 
 
