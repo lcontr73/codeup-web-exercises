@@ -6,18 +6,18 @@
 </head>
 <body>
 <h1 id="header">Hello World</h1>
-<div class="codeup">
-    <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, atque deleniti doloremque
+<div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, atque deleniti doloremque
         eaque est magni
         quasi quis ratione repudiandae voluptatem!</p>
-    <div class="codeup">
+    <div>
         <h2 id="list-header">This is an IMPORTANT List</h2>
         <ul id="list">
             <li class="list-item">Item 1</li>
-            <li class="list-item">Item 2</li>
-            <li class="list-item">Item 3</li>
-            <li class="list-item">Item 4</li>
-            <li class="list-item">Item 5</li>
+            <li class="codeup list-item">Item 2</li>
+            <li  class="codeup list-item">Item 3</li>
+            <li class="codeup list-item">Item 4</li>
+            <li class="codeup list-item">Item 5</li>
         </ul>
     </div>
 </div>
@@ -33,8 +33,11 @@
         // var header = $("#header").html();
         // alert(header);
 
+        // var listheader = $("#list-header").html();
+        // alert(listheader);
+
         // searches for class 'codeup' and applies a red border using css.
-        // $('.codeup').css('border', '1px solid red');
+        $('.codeup').css('border', '1px solid red');
 
         $('li').css('font-size', '20px')
 
@@ -42,8 +45,8 @@
         // $('p').css('background-color', 'red');
         // $('li').css('background-color', 'green');
 
-        var h1 = $('h1').html();
-        alert(h1);
+        alert($('h1').html());
+
 
         $('h1, p, li').css('background-color', '#FF0');
 
