@@ -62,23 +62,27 @@
          Set all li text color to red when the mouse is hovering; reset to black when it is not.
          **/
 
-            //Add jQuery code that will change the background color of an h1 element when clicked.
-        $('#header').click(function () {
-                $('h1').css('background-color', 'yellow');
-            });
+        //Add jQuery code that will change the background color of an h1 element when clicked.
+        $('h1').click(function (e) {
+            e.target.style.backgroundColor = 'yellow'
+        });
 
         // Make all paragraphs have a font size of 18px when they are double clicked.
-        var paraFont = $('p').dblclick(function (){
-            $('p').css('font-size', '18px');
+        $('p').dblclick(function (e) {
+            e.target.style.fontSize = '18px';
         })
 
         // Set all li text color to red when the mouse is hovering; reset to black when it is not.
-        $('.list-item').hover(function() {
-            $(this).css('color', 'red');
 
-            }, function() {
-                $(this).css('color', 'black');
-        })
+        function hoverIn(e) {
+            e.target.style.color = 'red';
+        }
+
+        function hoverOut(e) {
+            e.target.style.color = 'black';
+        }
+
+        $('li').hover(hoverIn, hoverOut)
 
     });
 </script>
