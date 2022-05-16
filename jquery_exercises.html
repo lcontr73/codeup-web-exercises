@@ -15,7 +15,7 @@
         <ul id="list">
             <li class="list-item">Item 1</li>
             <li class="codeup list-item">Item 2</li>
-            <li  class="codeup list-item">Item 3</li>
+            <li class="codeup list-item">Item 3</li>
             <li class="codeup list-item">Item 4</li>
             <li class="codeup list-item">Item 5</li>
         </ul>
@@ -37,18 +37,48 @@
         // alert(listheader);
 
         // searches for class 'codeup' and applies a red border using css.
-        $('.codeup').css('border', '1px solid red');
+        // $('.codeup').css('border', '1px solid red');
 
-        $('li').css('font-size', '20px')
+        //$('li').css('font-size', '20px')
 
         // $('h1').css('background-color', 'blue');
         // $('p').css('background-color', 'red');
         // $('li').css('background-color', 'green');
 
-        alert($('h1').html());
+        //alert($('h1').html());
 
 
-        $('h1, p, li').css('background-color', '#FF0');
+        //$('h1, p, li').css('background-color', '#FF0');
+
+        /**
+         Use the file jquery_exercises.html for these exercises. Commit your changes to GitHub.
+
+         Remove your custom jQuery code from previous exercises.
+
+         Add jQuery code that will change the background color of an h1 element when clicked.
+
+         Make all paragraphs have a font size of 18px when they are double clicked.
+
+         Set all li text color to red when the mouse is hovering; reset to black when it is not.
+         **/
+
+            //Add jQuery code that will change the background color of an h1 element when clicked.
+        var h1Background = $('#header').click(function () {
+                $('h1').css('background-color', 'yellow');
+            });
+
+        // Make all paragraphs have a font size of 18px when they are double clicked.
+        var paraFont = $('p').dblclick(function (){
+            $('p').css('font-size', '18px');
+        })
+
+        // Set all li text color to red when the mouse is hovering; reset to black when it is not.
+        var liText = $('ul > li').hover(function() {
+            $(this).css('color', 'red');
+
+            }, function() {
+                $(this).css('color', 'black');
+        })
 
     });
 </script>
