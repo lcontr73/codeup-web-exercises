@@ -63,7 +63,7 @@
          **/
 
             //Add jQuery code that will change the background color of an h1 element when clicked.
-        var h1Background = $('#header').click(function () {
+        $('#header').click(function () {
                 $('h1').css('background-color', 'yellow');
             });
 
@@ -73,7 +73,7 @@
         })
 
         // Set all li text color to red when the mouse is hovering; reset to black when it is not.
-        var liText = $('ul > li').hover(function() {
+        $('.list-item').hover(function() {
             $(this).css('color', 'red');
 
             }, function() {
