@@ -29,6 +29,26 @@
          Happy Playing.
          **/
 
+        var konamiCode = [38,38,40,40,37,39,37,39,66,65,13]
+
+        prompt('please enter your code!')
+        // var input = []
+        function trackInput(e) {
+            var input = []
+            e.preventDefault();
+            console.log(e)
+            // var addID = coffees.length + 1;
+            var addInput = input.value.toString();
+            // var addRoast = newRoast.value.toString();
+            var typed =  $(document).keyup(function (event) {
+                console.log(event.keyCode);
+            })
+            input.push(typed);
+            console.log(input);
+            // tbody.innerHTML = renderCoffees(coffees);
+        }
+        trackInput(e)
+
     });
 </script>
 </body>
