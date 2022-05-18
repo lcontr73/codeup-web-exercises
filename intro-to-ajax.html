@@ -22,6 +22,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+
         .card {
             display: flex;
             flex-direction: column;
@@ -54,15 +55,31 @@
                     '<p>' + title + '</p>' +
                     '<p>' + mural.artist_credit + '</p>' +
                     '<button class="more-info">More Information</button>' +
-                    '<p class="index" style="display:none">' + index + '</p>' +
-                    '</article>'
-                );
+                    '<p class="index" style="display: none">' + index + '</p>' +
+                    '</article>');
             });
-            $("#card-section").on('click', '.more_info', function(){
 
-            })
         });
+
+        //can use the below for the weather map code, to put a listener to an element that doesn't exist on the page
+        // $("#card-section").on('click', '.more-info', function () {
+        //     alert('yo');
+        // });
+
+
+        $("#card-section").on('click', '.more-info', function(){
+            let theClickedButton = $(this);
+            let index = theClickedButton.next().text();
+            $.ajax("/data/murals.json").done(function(data){
+                var year = data[index].year_installed;
+                $(theClickedButton).after('<p>' + year + '</p>');
+                alert("I come first in the code");
+            });
+            alert("I come later in the code");
+        });
+
     });
+
 </script>
 </body>
 </html>
