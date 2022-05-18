@@ -70,7 +70,7 @@
     </dd>
 </dl>
 <!--<a href="#" id="toggle-button">Toggle Answers</a>-->
-<button href="#" id="toggle-button">Click for Important Information</button>
+
 <h3>Denali National Park</h3>
 <ul>
     <li>DNP is home to the highest peak in North America, Denali. Called "The High One" in language of the Athabascan
@@ -102,7 +102,7 @@
     <li>Giant Sequoias and Mariposa Grove: Mariposa Grove contains about 500 mature giant sequoias.</li>
     <li>There are 840 miles of trails to hike in Yosemite National Park</li>
 </ul>
-
+<button>Click for Important Information</button>
 
 <script src="/js/jquery-3.6.0.js"></script>
 <script
@@ -126,15 +126,29 @@
         $("dt").addClass('question')
 
 
-        // $('#toggle-button')on.click(function () {
-        //     $('dd').toggleClass('invisible')
+        // Create a button that, when clicked, makes the last li in each ul have a yellow background.
+        $('button').on('click', function () {
+            $('ul').each(function () {
+                $(this).children().last().css('background-color', '#FF0');
+            });
+        })
+
+        // Alternate Code to add a button and change color of last list item
+        // $("button").click(function (){
+        //     $("li:last-child").css("background-color", "yellow");
         // });
-        $('ul').each(function () {
-            $(this).children().last().css('background-color', '#FF0');
-
-        });
 
 
+        // When any h3 is clicked, the li's underneath it should be bolded. Use font-weight: bold to achieve this.
+        $('h3').on('click', function () {
+            $(this).next().children().css('font-weight', 'bold');
+        })
+
+
+        // When any list item is clicked, first li of the parent ul should have a font color of blue.
+        $('li').on('click', function () {
+            $(this).parent().children().first().css('color', 'blue');
+        })
     });
 
 </script>
