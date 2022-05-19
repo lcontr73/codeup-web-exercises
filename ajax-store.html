@@ -10,12 +10,12 @@
             justify-items: center;
         }
 
-        .refresh {
+        .refresh-btn {
             display: flex;
-
             color: white;
             background-color: #D6031B;
         }
+
         h1 {
             display: flex;
             margin-top: 10px;
@@ -24,12 +24,16 @@
             color: white;
             font-weight: bold;
             font-size: 70px;
+
         }
 
         h1 span {
             background-color: #D6031B;
             padding: 10px;
             text-shadow: 0 0 25px black;
+            border: 1rem solid;
+            border-radius: 25px;
+
         }
 
 
@@ -40,13 +44,11 @@
         }
 
 
-
-
     </style>
 </head>
 <body>
 <div class="heading">
-<h1><span>My Tool Store</span></h1>
+    <h1><span>My Tool Store</span></h1>
 </div>
 <div class="container">
     <table id="products" class='table table-bordered table-success table-striped'>
@@ -62,7 +64,7 @@
     </table>
 </div>
 <div class="container">
-<button class="refresh">Refresh Inventory</button>
+    <button class="refresh-btn">Refresh Inventory</button>
 </div>
 
 
@@ -74,20 +76,27 @@
         "use strict";
 
         // TODO: Create an AJAX GET request for the file under data/inventory.json
-        // $("#refresh").click(function () {
-        $.ajax('/data/inventory.json').done(function (data) {
-            data.forEach(function (inventory) {
-                $("#products").append(
-                    '<tr>' +
-                    '<th>' + inventory.title + '</th>' +
-                    '<th>' + inventory.quantity + '</th>' +
-                    '<th>' + inventory.price + '</th>' +
-                    '<th>' + inventory.categories + '</th>')
+        function dataTable() {
+            $.ajax('/data/inventory.json').done(function (data) {
+                $('#insertProducts').html("");
+                data.forEach(function (inventory) {
+                    $("#products").append(
+                        '<tr>' +
+                        '<td>' + inventory.title + '</td>' +
+                        '<td>' + inventory.quantity + '</td>' +
+                        '<td>' + inventory.price + '</td>' +
+                        '<td>' + inventory.categories.join(',') + '</td>')
 
-                // })
+                });
 
-            })
-        })
+            });
+        }
+
+        dataTable();
+
+        $("button").on("click", function () {
+            console.log(dataTable());
+        });
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
