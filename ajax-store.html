@@ -13,7 +13,10 @@
         .refresh-btn {
             display: flex;
             color: white;
+            border: 5px solid;
+            border-radius: 25px;
             background-color: #D6031B;
+            font-family: Sans-Serif;
         }
 
         h1 {
@@ -85,8 +88,7 @@
                         '<td>' + inventory.title + '</td>' +
                         '<td>' + inventory.quantity + '</td>' +
                         '<td>' + inventory.price + '</td>' +
-                        '<td>' + inventory.categories.join(',') + '</td>')
-
+                        '<td>' + inventory.categories.join(', ') + '</td>')
                 });
 
             });
