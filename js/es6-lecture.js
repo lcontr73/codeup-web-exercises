@@ -80,17 +80,17 @@ console.log(num2);
 
 // Very helpful for building HTML with JS
 
-// let items = ['apple', 'grape', 'orange'];
+let items = ['apple', 'grape', 'orange'];
 //
-// let itemsHtml = `
-//     <ul>
-//         <li>${items[0]}</li>
-//         <li>${items[1]}</li>
-//         <li>${items[2]}</li>
-//     </ul>
-// `;
-//
-// console.log(itemsHtml);
+let itemsHtml = `
+    <ul>
+        <li>${items[0]}</li>
+        <li>${items[1]}</li>
+        <li>${items[2]}</li>
+    </ul>
+`;
+
+console.log(itemsHtml);
 // document.write(itemsHtml);
 
 // Can pass in expressions to ${}
