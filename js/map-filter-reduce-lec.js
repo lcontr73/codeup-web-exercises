@@ -216,7 +216,7 @@ console.log("Items under $50: ", priceLessFifty)
 // The final result of running the reducer across all elements of the array as a single value.
 
 // Array.prototype.reduce((previousValue, currentValue, index(optional), array(optional)) => { callback function body }, initialValue(optional))
-
+//
 // let grades = [92, 88, 76, 88, 68, 95]
 // //
 // let gradeTotal = grades.reduce((previousValue, currentValue) => {
@@ -230,23 +230,23 @@ console.log("Items under $50: ", priceLessFifty)
 // console.log(gradeAvg);
 
 
-// let ballSports = sports.reduce((previousVal, currentVal) => {
-//     if (currentVal.includes('ball')) {
-//         previousVal += currentVal
-//     }
-//     return previousVal;
-// }, "")
-//
-// console.log(ballSports);
-
-
-let reducedPrice = products.reduce((bucket, product) => {
-    console.log(bucket)
-    console.log(product)
-    if (product.price < 50) {
-        console.log(bucket)
-        bucket.push(product);
+let ballSports = sports.reduce((previousVal, currentVal) => {
+    if (currentVal.includes('ball')) {
+        previousVal += currentVal
     }
-    return bucket;
-},[])
-console.log(reducedPrice)
+    return previousVal;
+}, "")
+
+console.log(ballSports);
+
+
+// let reducedPrice = products.reduce((bucket, product) => {
+//     console.log(bucket)
+//     console.log(product)
+//     if (product.price < 50) {
+//         console.log(bucket)
+//         bucket.push(product);
+//     }
+//     return bucket;
+// },[])
+// console.log(reducedPrice)
