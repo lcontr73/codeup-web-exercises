@@ -12,7 +12,7 @@ console.log(num2);
 // ============== Let and Const (block scope vs. function scope)
 
 // var vs. let vs. const
-//
+
 // {
 //     var a = 10;
 // }
@@ -29,8 +29,6 @@ console.log(num2);
 //
 // console.log(a);
 
-
-
 // block scope applies to any code structure that can use curly braces (loops, conditional logic, functions, etc.)
 
 // constants can't be reassigned
@@ -43,7 +41,7 @@ console.log(num2);
 // constants and let can't be redeclared in the same scope
 
 // let test = 'hello';
-// let test = 'world';
+// test = 'world';
 // console.log(test);
 
 // Use constants for everything you can and let for everything else. Don't use var.
@@ -61,16 +59,24 @@ console.log(num2);
 // let quote = "";
 // quote += '"You had me at \'meat tornado\'" - ';
 // quote += firstName + " " + lastName;
-//
+// //
 // console.log(quote);
 
 
 
 // ES6 Template Strings...
 
+// let firstName = "Ron";
+// let lastName = "Swanson";
 // let easierQuote = `"You had me at 'meat tornado'" - ${firstName} ${lastName}`;
+
+
+
 //
 // console.log(easierQuote);
+// const output = `Hello my name is Justin and I am ${$('hello').text()} years old.`;
+
+// console.log(output);
 
 // Very helpful for building HTML with JS
 
@@ -92,25 +98,36 @@ console.log(num2);
 // const output = `I ate ${2 + 2} slices of pizza.`;
 // console.log(output);
 
+// const firstName = 'Justin';
+// const lastName = 'Reich';
+// const fullName = `${firstName} ${lastName}`;
+
 
 // ============== MINI EXERCISE
 
-// TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
-
-// var greatDessert = 'banana pudding';
-// var badDessert = 'rhubarb pie';
-// var dessertMessage = 'Well, I love ' + greatDessert + ' ' + 'but I don\'t care for ' + badDessert + '.';
-// console.log(dessertMessage);
-
+// // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
+//
 // const greatDessert = 'banana pudding';
 // const badDessert = 'rhubarb pie';
 // const dessertMessage = `Well, I love ${greatDessert} but I don't care for ${badDessert}.`;
-// console.log(dessertMessage)
+// console.log(dessertMessage);
+
 
 // ============== for ..of loop (works on node lists!!!)
 
-// const numbers = ["one", "two", "three"];
+const numbers = ["one", "two", "three"];
 
+// for (let number of numbers) {
+//     console.log(number);
+// }
+//
+// const hello = 'hello';
+//
+// for (let letter of hello) {
+//     console.log(letter);
+// }
+
+//
 // const people = [
 //     {
 //         firstN: 'bob',
@@ -121,21 +138,27 @@ console.log(num2);
 //         lastN: 'smith'
 //     }
 // ];
-
-// regular for loop
-// for (var i = 0; i < people.length; i += 1) {
-//     console.log(people[i].firstN);
-// }
-
-// forEach loop version
-// people.forEach(function(person) {
-//     console.log(person.firstN);
-// });
-
-// for...of loop
-// for (let person of people) {
-//     console.log(person.firstN);
-// }
+//
+// // regular for loop
+//     for (var i = 0; i < people.length; i += 1) {
+//         console.log(people[i].firstN);
+//     }
+//
+// // forEach loop version
+//     people.forEach(function(person) {
+//         console.log(person.firstN);
+//     });
+//
+// // for...of loop
+//     for (let person of people) {
+//         console.log(person.firstN);
+//     }
+//
+//     const lis = document.querySelectorAll('li');
+//     // for (let li of lis) {
+//     //
+//     // }
+//
 
 
 // Works on strings
@@ -147,45 +170,42 @@ console.log(num2);
 
 // ============== MINI EXERCISE
 
-// TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
+// // TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 //
-// var message = '';
-// var names = ['John', 'Paul', 'George', 'Ringo'];
-// for (var i = 0; i < names.length; i += 1) {
-//     message += 'Hello, ' + names[i] + '\n';
+// let message = '';
+// let names = ['John', 'Paul', 'George', 'Ringo'];
+// for (let name of names) {
+//     message += `Hello, ${name}\n`;
 // }
 // console.log(message);
-
-// const message = '';
-// const names = ['John', 'Paul', 'George', 'Ringo'];
-// for (let name of names) {
-//     console.log(`Hello, ${name} \n`)
-// }
 
 
 
 // ============== Arrow Functions
 
 // function declaration
-// function addOne(arg1) {
-//     return arg1 + 1;
-// }
+//     function addOne(arg1) {
+//         return arg1 + 1;
+//     }
 
 // original function expression
-// const addOneA = function(arg1) {
-//     return arg1 + 1;
-// };
+//     const addOneA = (arg1) => {
+//         return arg1 + 1;
+//     };
 
 // refactor to use arrow functions
-// const addOneB = (arg1) => {
-//     return arg1 + 1;
-// };
+//     const addOneB = (arg1) => {
+//         return arg1 + 1;
+//     };
+
+
+
 
 // removed curly braces (if only one statement)
-// const addOneC = (arg1) => arg1 + 1;
+//     const addOneC = (arg1) => arg1 + 1;
 
 // removed parens if one input only
-// const addOneD = arg1 => arg1 + 1;
+//     const addOneD = arg1 => arg1 + 1;
 
 
 // console.log(addOneA(2));
@@ -194,9 +214,31 @@ console.log(num2);
 // console.log(addOneD(2));
 
 
-/*const addNames = function (fName, lName) {
-    return `${fName} ${lName}`;
-};*/
+// const addNames = function (fName, lName) {
+//     return `${fName} ${lName}`;
+// };
+
+// const addNames = (fName, lName) => `${fName} ${lName}`;
+
+// console.log(addNames('Justin', 'Reich'));
+
+// var names = ['a', 'b', 'c'];
+// names.forEach((name) => {
+//     console.log(name);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const addNames = (fName, lName) => `${fName} ${lName}`;
 //
@@ -215,35 +257,35 @@ console.log(num2);
 //     return input * 2;
 // }
 
-const doubleInput = input => input*2
+const doubleInput = input => input * 2;
 
-console.log(doubleInput(3))
+console.log(doubleInput(5));
 
 
 // ============== Default Parameter Values
 
 // Common ES5 approach
-// let addArgsA = (num1, num2) => {
-//     if (num1 === undefined) {
-//         num1 = 2;
-//     }
-//     if (num2 === undefined) {
-//         num2 = 2;
-//     }
-//     return num1 + num2;
-// };
+//     let addArgsA = (num1, num2) => {
+//         if (num1 === undefined) {
+//             num1 = 2;
+//         }
+//         if (num2 === undefined) {
+//             num2 = 2;
+//         }
+//         return num1 + num2;
+//     };
 
 // Shorter ES5 approach
-// let addArgsB = (num1, num2) => {
-//     num1 = num1 || 2;
-//     num2 = num2 || 2;
-//     return num1 + num2;
-// };
+//     let addArgsB = (num1, num2) => {
+//         num1 = num1 || 2;
+//         num2 = num2 || 2;
+//         return num1 + num2;
+//     };
 
 
 // Even better ES6 approach
 
-// let addArgsC = (num1 = 2, num2 = 2) => num1 + num2;
+let addArgsC = (num1 = 2, num2 = 2) => num1 + num2;
 
 // Test output
 
@@ -257,20 +299,21 @@ console.log(doubleInput(3))
 // console.log(addArgsB(1));
 // console.log(addArgsB(3, 3));
 //
-// console.log("\nC output...");
-// console.log(addArgsC());
-// console.log(addArgsC(1));
-// console.log(addArgsC(3, 3));
+console.log("\nC output...");
+console.log(addArgsC());
+console.log(addArgsC(1));
+console.log(addArgsC(3, 3));
 
 
 // ============== Object Assignment Shorthand
 
 // variables to build object from...
 
-// let breed = "Pug";
-// let age = 3;
-// let name = "Lexie";
-// let isCute = true;
+let breed = "Pug";
+let age = 3;
+let name = "Lexie";
+let isCute = true;
+let coat = "brindle"
 
 // ES5 way...
 
@@ -283,28 +326,38 @@ console.log(doubleInput(3))
 // //
 // console.log(dog.name);
 
+// can also assign properties using dot notation assignment.
+// var dog = {};
+// dog.breed = breed;
+
 // ES6 way...
 
-// const dog = {
-//     breed,
-//     age,
-//     name,
-//     isCute
-// };
+const dog = {
+    breed,
+    age,
+    name,
+    isCute,
+    coat
+};
 // //
-// console.log(dog.name);
+// console.log(dog);
+//
+// coat = "white";
+//
+// console.log(coat)
+// console.log(dog.coat)
 
 
 // ============== Object / Array Destructuring
 
 // object to destructure...
 
-// const puppy = {
-//     breed: "Lab",
-//     age: 10,
-//     name: "Sabrina",
-//     isCute: true
-// };
+const puppy = {
+    breed: "Lab",
+    age: 10,
+    name: "Sabrina",
+    isCute: true
+};
 
 // let breed = puppy.breed;
 // let age = puppy.age;
@@ -312,48 +365,50 @@ console.log(doubleInput(3))
 // let isCute = puppy.isCute;
 
 // let { breed, age, name, isCute } = puppy;
+
+// change the values of the property variable, not the object instance
+// breed = "dalmation";
+// age = 6;
+// name = "Lola"
 //
-//
-// //
 // console.log(breed);
 // console.log(age);
 // console.log(name);
 // console.log(isCute);
+// console.log(puppy)
 
-//
-// const data = {
-//     hum: ["32%", "35%"],
-//     temp: {
-//         degreesMetric: 34,
-//         degreesImperial: 56
-//     },
-//     pressure: "1100ml",
-//     extra: "asdfasd",
-//     extra1: "sdfsdf"
-// }
-
-
-// function buildWeatherPanel({ hum, temp, pressure }) {
-//     // let { hum, temp, pressure } = data;
-//     let { degreesMetric, degreesImperial } = temp;
-//     return `
-//         <div class="card">
-//             <p>${hum[1]}</p>
-//             <p>${temp}</p>
-//             <p>${pressure}</p>
-//         </div>
-//     `;
-// }
+const data = {
+    hum: ["32%", "35%"],
+    temp: {
+        degreesMetric: 34,
+        degreesImperial: 56
+    },
+    pressure: "1100ml",
+    extra: "asdfasd",
+    extra1: "sdfsdf"
+}
 
 
+function buildWeatherPanel({ temp, pressure, hum }) {
+    // let { hum, temp, pressure } = data;
+    let { degreesMetric, degreesImperial } = temp;
+    return `
+        <div class="card">
+            <p>${hum[1]}</p>
+            <p>Metric: ${degreesMetric}, Imperial: ${degreesImperial}</p>
+            <p>${pressure}</p>
+        </div>
+    `;
+}
 
+// console.log(buildWeatherPanel(data));
 
 
 // destructuring with arrays...
 
-// let cats = ["CJ", "Claude", "Max"];
+let cats = ["CJ", "Claude", "Max"];
 
-// let [ cat1, cat2, cat3 ] = cats;
+let [ cat1, cat2, cat3 ] = cats;
 
 // let cat1 = cats[0];
 // let cat2 = cats[1];
@@ -369,13 +424,13 @@ console.log(doubleInput(3))
 
 // destructuring...
 
-// const getArea = ({ height, width }) => height * width;
+const getArea = ({ height, width }) => height * width;
 //
 // let shape = {
 //     height: 20,
 //     width: 10
 // };
-//
+// //
 // let rectangle1 = {
 //     height: 40,
 //     width: 10
@@ -385,16 +440,19 @@ console.log(doubleInput(3))
 //     height: 20,
 //     width: 40
 // }
-//
+// //
 // console.log(getArea(shape));
 // console.log(getArea(rectangle1));
 // console.log(getArea(rectangle2));
 
 // assignment...
 
-// let height = 20;
-// let width = 10;
+let height = 20;
+let width = 10;
 
 
 
-// console.log(getArea({ height, width }));
+console.log(getArea({ height, width }));
+
+
+
