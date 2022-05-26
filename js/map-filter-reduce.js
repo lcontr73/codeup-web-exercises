@@ -36,17 +36,17 @@ const users = [
         yearsOfExperience: 9
     }
 ];
-// Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
+// TODO: Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
 
 let lang3 = users.filter(user => user.languages.length >= 3);
 console.log("Users with more than 3 languages: ", lang3);
 
-// Use .map to create an array of strings where each element is a user's email address
+// TODO: Use .map to create an array of strings where each element is a user's email address
 
-let userEmail = users.map((user) => user.email)
-console.log(userEmail);
+let userEmail = users.map(user => user.email)
+console.log("emails: ", userEmail);
 
-// Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+// TODO: Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
 let totalYearsExperience = users.reduce((previousVal, currentVal) => {
     console.log(previousVal)
     console.log(currentVal)
@@ -56,4 +56,42 @@ console.log(totalYearsExperience);
 
 let avgYears = totalYearsExperience / users.length;
 
-// Use .reduce to get the longest email from the list of users.
+// TODO: Use .reduce to get the longest email from the list of users.
+let longestEmail = users.reduce((previousValue, currentValue) => {
+    if (currentValue.email.length > previousValue.length) {
+        previousValue = currentValue.email
+    }
+    return previousValue
+}, "")
+
+console.log(longestEmail);
+
+// TODO: Use .reduce to get the list of user's names in a single string.
+//  Example: Your instructors are: ryan, luis, zach, fernando, justin.
+
+// Instructor Solution:
+let instructorsString = users.reduce((previousValue, currentValue, currentIndex, array) => {
+    let delimiter = ",";
+
+    if(currentIndex === (array.length-1)) delimiter = ",";
+
+    return previousValue + currentValue.name + delimiter + " ";
+},"Your instructors are: ")
+
+console.log("instructorsString: ", instructorsString);
+
+/**
+Bonus
+Use .reduce to get the unique list of languages from the list of users.
+ **/
+//Instructor Solution:
+const uniqueLanguages = users.reduce((previousValue, currentValue, currentIndex, array) => {
+
+    currentValue.languages.forEach(language => {
+        if(previousValue.indexOf(language) === -1) previousValue.push(language)
+    })
+
+    return previousValue
+}, [])
+
+console.log("uniqueLanguages: ", uniqueLanguages)
